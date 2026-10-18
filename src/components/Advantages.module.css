@@ -22,15 +22,15 @@
   border-radius: var(--radius-xl);
   padding: 2rem;
   box-shadow: var(--shadow-card);
-  transition: all var(--transition-normal);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
   display: flex;
   flex-direction: column;
 }
 
 .advantageCard:hover {
-  transform: translateY(-4px);
-  border-color: var(--color-green-border);
-  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-5px);
+  border-color: #86efac;
+  box-shadow: 0 16px 32px rgba(15, 23, 42, 0.08);
 }
 
 .advantageIconWrapper {
@@ -44,6 +44,13 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 1.25rem;
+  transition: all 0.3s ease;
+}
+
+.advantageCard:hover .advantageIconWrapper {
+  transform: scale(1.08);
+  background-color: var(--color-green-primary);
+  color: #ffffff;
 }
 
 .advantageTitle {

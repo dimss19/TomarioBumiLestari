@@ -125,36 +125,13 @@ export function Products({ onOpenQuoteModal }: ProductsProps) {
                 </div>
 
                 <div className={styles.productCardFooter}>
-                  <div className={styles.actionsDual}>
-                    <a
-                      href={waUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="btn btn-whatsapp btn-sm"
-                      title="Pesan via WhatsApp"
-                    >
-                      <IconWhatsAppFilled size={15} />
-                      <span>WhatsApp</span>
-                    </a>
-
-                    <a
-                      href={emailUrl}
-                      className="btn btn-outline-dark btn-sm"
-                      title="Kirim Permintaan via Email"
-                    >
-                      <IconMail size={15} />
-                      <span>Email</span>
-                    </a>
-                  </div>
-
                   <button
                     type="button"
-                    className="btn btn-primary btn-sm"
-                    style={{ width: '100%' }}
+                    className={styles.orderBtn}
                     onClick={() => onOpenQuoteModal(product.name)}
                   >
-                    <span>Formulir Pesanan</span>
-                    <IconArrowRight size={13} />
+                    <span>Pesan / Minta Penawaran</span>
+                    <IconArrowRight size={15} className={styles.orderBtnIcon} />
                   </button>
                 </div>
               </div>

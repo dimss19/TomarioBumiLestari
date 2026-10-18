@@ -60,13 +60,30 @@
   box-shadow: var(--shadow-card);
   display: flex;
   flex-direction: column;
-  transition: all var(--transition-normal);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+.productCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #15803d, #4ade80);
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .productCard:hover {
-  border-color: var(--color-green-border);
-  box-shadow: var(--shadow-card-hover);
-  transform: translateY(-3px);
+  border-color: #86efac;
+  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.08);
+  transform: translateY(-6px);
+}
+
+.productCard:hover::before {
+  opacity: 1;
 }
 
 .productCardHeader {
@@ -186,16 +203,40 @@
 /* Card Actions */
 .productCardFooter {
   padding: 1.25rem 1.5rem;
-  border-top: 1px solid var(--color-border);
+  border-top: 1px solid var(--color-border-subtle);
   background-color: #fafbfc;
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
   margin-top: auto;
 }
 
-.actionsDual {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.5rem;
+.orderBtn {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  background-color: var(--color-black-pure);
+  color: #ffffff;
+  font-family: var(--font-heading);
+  font-size: 0.875rem;
+  font-weight: 700;
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-black-pure);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.orderBtn:hover {
+  background-color: var(--color-green-primary);
+  border-color: var(--color-green-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(21, 128, 61, 0.25);
+}
+
+.orderBtnIcon {
+  transition: transform 0.25s ease;
+}
+
+.orderBtn:hover .orderBtnIcon {
+  transform: translateX(4px);
 }

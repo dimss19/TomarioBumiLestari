@@ -50,7 +50,7 @@ export function Hero({ onOpenQuoteModal }: HeroProps) {
             <div className={styles.heroActions}>
               <button
                 type="button"
-                className="btn btn-primary btn-lg"
+                className="btn btn-primary btn-lg btn-shimmer"
                 onClick={() => onOpenQuoteModal()}
               >
                 <span>Minta Penawaran</span>
@@ -65,14 +65,6 @@ export function Hero({ onOpenQuoteModal }: HeroProps) {
               >
                 <IconWhatsAppFilled size={18} />
                 <span>WhatsApp: {COMPANY_INFO.phoneDisplay}</span>
-              </a>
-
-              <a
-                href={emailUrl}
-                className="btn btn-outline-dark btn-lg"
-              >
-                <IconMail size={18} />
-                <span>Email Kami</span>
               </a>
             </div>
 

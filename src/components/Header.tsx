@@ -44,46 +44,6 @@ export function Header({ onOpenQuoteModal }: HeaderProps) {
 
   return (
     <header className={styles.headerWrapper}>
-      {/* Light Clean Micro-Topbar */}
-      <div className={styles.topBar}>
-        <div className={`container ${styles.topBarContainer}`}>
-          <div className={styles.topBarGroup}>
-            <a
-              href={`tel:${COMPANY_INFO.phoneRaw}`}
-              className={styles.topBarItem}
-              title="Hubungi Kami via Telepon"
-            >
-              <IconPhone size={13} color="#15803d" />
-              <span>{COMPANY_INFO.phoneDisplay}</span>
-            </a>
-            <a
-              href={`mailto:${COMPANY_INFO.email}`}
-              className={styles.topBarItem}
-              title="Kirim Email Resmi"
-            >
-              <IconMail size={13} color="#15803d" />
-              <span>{COMPANY_INFO.email}</span>
-            </a>
-          </div>
-
-          <div className={styles.topBarGroup}>
-            <div className={styles.topBarItem}>
-              <IconClock size={13} color="#64748b" />
-              <span>{COMPANY_INFO.operationalHours}</span>
-            </div>
-            <a
-              href={quickWaLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`${styles.topBarItem} ${styles.topBarHighlight}`}
-            >
-              <IconWhatsApp size={13} color="#15803d" />
-              <span>Chat WhatsApp Langsung</span>
-            </a>
-          </div>
-        </div>
-      </div>
-
       {/* Main Navbar */}
       <div className={styles.navBar}>
         <div className={`container ${styles.navContainer}`}>
@@ -122,7 +82,7 @@ export function Header({ onOpenQuoteModal }: HeaderProps) {
           <div className={styles.navActions}>
             <button
               type="button"
-              className={styles.quoteBtn}
+              className={`${styles.quoteBtn} btn-shimmer`}
               onClick={() => onOpenQuoteModal()}
             >
               <span>Minta Penawaran</span>

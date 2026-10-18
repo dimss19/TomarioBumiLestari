@@ -182,8 +182,7 @@ export function Calculator() {
                 href={waUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn btn-whatsapp"
-                style={{ width: '100%' }}
+                className={styles.btnWhatsApp}
               >
                 <IconWhatsAppFilled size={18} />
                 <span>Kirim Hasil ke WhatsApp</span>
@@ -191,8 +190,7 @@ export function Calculator() {
 
               <a
                 href={emailUrl}
-                className="btn btn-outline-dark"
-                style={{ width: '100%', borderColor: 'rgba(255,255,255,0.25)', color: '#ffffff' }}
+                className={styles.btnEmail}
               >
                 <IconMail size={18} />
                 <span>Kirim Hasil ke Email</span>

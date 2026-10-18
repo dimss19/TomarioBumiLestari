@@ -110,36 +110,27 @@ export function Services({ onOpenQuoteModal }: ServicesProps) {
                     </ul>
                   </div>
 
-                  {/* Actions to WhatsApp and Email */}
+                  {/* Streamlined Actions */}
                   <div className={styles.serviceActions}>
+                    <button
+                      type="button"
+                      className="btn btn-primary"
+                      onClick={() => onOpenQuoteModal(service.title)}
+                    >
+                      <span>Minta Penawaran &amp; RAB</span>
+                      <IconArrowRight size={15} />
+                    </button>
+
                     <a
                       href={waLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="btn btn-whatsapp btn-sm"
+                      className="btn btn-whatsapp"
                       title="Konsultasi via WhatsApp"
                     >
                       <IconWhatsAppFilled size={16} />
                       <span>WhatsApp Kami</span>
                     </a>
-
-                    <a
-                      href={emailLink}
-                      className="btn btn-outline-dark btn-sm"
-                      title="Kirim Dokumen Tender ke Email"
-                    >
-                      <IconMail size={16} />
-                      <span>Kirim Email</span>
-                    </a>
-
-                    <button
-                      type="button"
-                      className="btn btn-primary btn-sm"
-                      onClick={() => onOpenQuoteModal(service.title)}
-                    >
-                      <span>Minta Penawaran / RAB</span>
-                      <IconArrowRight size={14} />
-                    </button>
                   </div>
                 </div>
               </div>

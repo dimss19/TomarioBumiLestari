@@ -36,6 +36,17 @@
   }
 }
 
+@keyframes floatWa {
+  0%, 100% {
+    transform: translateY(0);
+    box-shadow: 0 4px 18px rgba(37, 211, 102, 0.45);
+  }
+  50% {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(37, 211, 102, 0.6);
+  }
+}
+
 .floatingButton {
   width: 56px;
   height: 56px;
@@ -49,10 +60,12 @@
   transition: all var(--transition-normal);
   border: none;
   cursor: pointer;
+  animation: floatWa 3.5s ease-in-out infinite;
 }
 
 .floatingWrapper:hover .floatingButton {
-  transform: scale(1.08) translateY(-2px);
+  transform: scale(1.1) translateY(-2px);
   background-color: #20bd5a;
-  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.55);
+  box-shadow: 0 8px 26px rgba(37, 211, 102, 0.65);
+  animation-play-state: paused;
 }
