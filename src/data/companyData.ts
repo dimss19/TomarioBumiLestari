@@ -7,6 +7,7 @@ export interface ProductItem {
   description: string;
   density: string;
   image: string;
+  imagePosition?: string;
   specs: string[];
   applications: string[];
   badgeColor?: string;
@@ -141,6 +142,7 @@ export const PRODUCTS_DATA: ProductItem[] = [
       "Hasil sampingan pemecahan batu alam bermutu tinggi berukuran halus 0-5 mm. Mengandung mineral silika murni yang memperkuat kepadatan campuran beton dan aspal.",
     density: "± 1.40 - 1.55 ton/m³",
     image: "/images/products/abu_batu.jpg",
+    imagePosition: "center 80%",
     specs: [
       "Ukuran partikel: 0 - 5 mm",
       "Kadar debu halus terukur sesuai spesifikasi Bina Marga",

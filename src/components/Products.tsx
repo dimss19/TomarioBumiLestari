@@ -96,6 +96,7 @@ export function Products({ onOpenQuoteModal }: ProductsProps) {
                     src={product.image}
                     alt={product.name}
                     className={styles.productImage}
+                    style={product.imagePosition ? { objectPosition: product.imagePosition } : undefined}
                     loading="lazy"
                   />
                 </div>
