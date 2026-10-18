@@ -190,7 +190,7 @@ export function OrderModal({ isOpen, initialItem, onClose }: OrderModalProps) {
               id="modal-location"
               type="text"
               className={styles.formInput}
-              placeholder="Contoh: Makassar / Gowa / Maros / Sekitarnya"
+              placeholder="Contoh: Tobelo / Halmahera Utara / Sekitarnya"
               value={projectLocation}
               onChange={(e) => setProjectLocation(e.target.value)}
             />

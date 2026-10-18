@@ -4,23 +4,13 @@ Website Profil Perusahaan Resmi untuk **CV. Tomario Bumi Lestari** - Produsen Ma
 
 ## Gambaran Umum
 
-CV. Tomario Bumi Lestari bergerak di bidang pengolahan batu andesit/basalt (stone crusher) dan kontraktor pelaksana konstruksi di Sulawesi Selatan, Indonesia.
+CV. Tomario Bumi Lestari bergerak di bidang pengolahan batu andesit/basalt (stone crusher) dan kontraktor pelaksana konstruksi di Kabupaten Halmahera Utara, Maluku Utara.
 
-### Produk Material Tambang:
-- Agregat 10/10 mm (Batu Split 1x1)
-- Agregat 10/20 mm (Batu Split 1x2)
-- Agregat 20/30 mm (Batu Split 2x3)
-- Agregat 30/50 mm (Batu Split 3x5)
-- Abu Batu (Stone Dust / Screening 0-5 mm)
-- Pasir Konstruksi (Pasir Cor Beton & Pasir Pasang Alami)
-
-### Jasa Konstruksi:
-- Konstruksi Bangunan Gedung (Perkantoran, Komersial, Ruko, Gudang Industri)
-- Konstruksi Bangunan Civil (Infrastruktur Jalan Aspal & Beton, Jembatan, Drainase, Cut & Fill)
-
-### Saluran Pemesanan Langsung:
-- WhatsApp: +62 853-9767-0606
-- Email: Tomariobule@gmail.com
+### Alamat & Kontak:
+- **Alamat**: Jln. Raja Bunga Jago, Kecamatan Tobelo, Kabupaten Halmahera Utara
+- **Jam Operasional**: 10:00 - 19:00 WIT
+- **WhatsApp**: +62 853-9767-0606
+- **Email**: Tomariobule@gmail.com
 
 ---
 

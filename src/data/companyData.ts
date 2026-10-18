@@ -30,8 +30,8 @@ export const COMPANY_INFO = {
   phoneDisplay: "+62 853-9767-0606",
   phoneRaw: "6285397670606",
   email: "Tomariobule@gmail.com",
-  address: "Sulawesi Selatan, Indonesia",
-  operationalHours: "Senin - Sabtu: 08:00 - 17:00 WITA",
+  address: "Jln. Raja Bunga Jago, Kecamatan Tobelo, Kabupaten Halmahera Utara",
+  operationalHours: "10:00 - 19:00 WIT",
   whatsappDirectUrl: "https://wa.me/6285397670606",
   heroSubtitle:
     "Produsen dan pemasok material batu agregat berkualitas standar SNI, abu batu, pasir cor alam, serta mitra kontraktor berpengalaman untuk proyek bangunan gedung komersial dan infrastruktur teknik sipil.",

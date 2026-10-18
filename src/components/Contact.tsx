@@ -105,10 +105,10 @@ export function Contact({ onOpenQuoteModal }: ContactProps) {
                 <IconMapPin size={24} color="#15803d" />
               </div>
               <div className={styles.contactCardContent}>
-                <span className={styles.contactCardLabel}>Wilayah Layanan</span>
-                <span className={styles.contactCardValue}>Sulawesi Selatan &amp; Sekitarnya</span>
+                <span className={styles.contactCardLabel}>Alamat Kantor / Operasional</span>
+                <span className={styles.contactCardValue}>{COMPANY_INFO.address}</span>
                 <span className={styles.contactCardNote}>
-                  Melayani pengiriman material ke seluruh area proyek dan pekerjaan konstruksi regional.
+                  Melayani pengiriman material dan pelaksanaan konstruksi di Tobelo, Halmahera Utara, dan sekitarnya.
                 </span>
               </div>
             </div>
