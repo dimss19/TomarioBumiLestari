@@ -66,11 +66,6 @@ export function Footer() {
                 </a>
               </li>
               <li className={styles.linkItem}>
-                <a href="#kalkulator" className={styles.footerLink}>
-                  Kalkulator Material
-                </a>
-              </li>
-              <li className={styles.linkItem}>
                 <a href="#keunggulan" className={styles.footerLink}>
                   Keunggulan Kami
                 </a>

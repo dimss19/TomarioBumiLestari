@@ -34,7 +34,6 @@ export function Header({ onOpenQuoteModal }: HeaderProps) {
     { label: 'Tentang Kami', href: '#tentang' },
     { label: 'Produk Material', href: '#produk' },
     { label: 'Jasa Konstruksi', href: '#konstruksi' },
-    { label: 'Kalkulator', href: '#kalkulator' },
     { label: 'Kontak', href: '#kontak' },
   ];
 

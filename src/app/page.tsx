@@ -6,7 +6,6 @@ import { Hero } from '@/components/Hero';
 import { About } from '@/components/About';
 import { Products } from '@/components/Products';
 import { Services } from '@/components/Services';
-import { Calculator } from '@/components/Calculator';
 import { Advantages } from '@/components/Advantages';
 import { Contact } from '@/components/Contact';
 import { Footer } from '@/components/Footer';
@@ -43,9 +42,6 @@ export default function Home() {
 
       {/* Construction Services: Bangunan Gedung & Bangunan Civil */}
       <Services onOpenQuoteModal={handleOpenQuoteModal} />
-
-      {/* Interactive Material Calculator */}
-      <Calculator />
 
       {/* Company Advantages & Core Strengths */}
       <Advantages />
