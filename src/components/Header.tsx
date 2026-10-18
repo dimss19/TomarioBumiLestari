@@ -9,13 +9,12 @@ import {
   IconClock,
   IconWhatsApp,
   IconMenu,
-  IconClose,
-  IconArrowRight
+  IconClose
 } from './Icons';
 import styles from './Header.module.css';
 
 interface HeaderProps {
-  onOpenQuoteModal: (initialItem?: string) => void;
+  onOpenQuoteModal?: (initialItem?: string) => void;
 }
 
 export function Header({ onOpenQuoteModal }: HeaderProps) {
@@ -77,17 +76,8 @@ export function Header({ onOpenQuoteModal }: HeaderProps) {
             </ul>
           </nav>
 
-          {/* Action Button & Mobile Toggle */}
+          {/* Mobile Toggle */}
           <div className={styles.navActions}>
-            <button
-              type="button"
-              className={`${styles.quoteBtn} btn-shimmer`}
-              onClick={() => onOpenQuoteModal()}
-            >
-              <span>Minta Penawaran</span>
-              <IconArrowRight size={14} />
-            </button>
-
             <button
               type="button"
               className={styles.hamburgerBtn}
@@ -146,19 +136,6 @@ export function Header({ onOpenQuoteModal }: HeaderProps) {
               </li>
             ))}
           </ul>
-
-          <button
-            type="button"
-            className="btn btn-primary"
-            style={{ width: '100%', marginBottom: '1.5rem' }}
-            onClick={() => {
-              closeMobileMenu();
-              onOpenQuoteModal();
-            }}
-          >
-            <span>Minta Penawaran</span>
-            <IconArrowRight size={16} />
-          </button>
 
           <div style={{ marginTop: 'auto', paddingTop: '1rem', borderTop: '1px solid #e2e8f0', fontSize: '0.8125rem' }}>
             <div style={{ fontWeight: 700, color: '#090d10', marginBottom: '0.5rem' }}>Kontak Resmi:</div>
