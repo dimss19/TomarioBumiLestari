@@ -2,24 +2,24 @@ import React from 'react';
 import Link from 'next/link';
 import { COMPANY_INFO, buildWhatsAppLink } from '@/data/companyData';
 import {
-  IconPhone,
   IconMail,
   IconClock,
   IconMapPin,
-  IconWhatsAppFilled
+  IconWhatsAppFilled,
+  IconShieldCheck
 } from './Icons';
 import styles from './Footer.module.css';
 
 export function Footer() {
   const waUrl = buildWhatsAppLink(
-    'Halo CV. Tomario Bumi Lestari, saya ingin bertanya seputar profil dan layanan perusahaan.'
+    'Halo CV. Tomario Bumi Lestari, saya ingin bertanya seputar profil dan pemesanan material / jasa konstruksi.'
   );
 
   return (
     <footer className={styles.footerWrapper}>
       <div className="container">
         <div className={styles.footerGrid}>
-          {/* Brand Info */}
+          {/* Column 1: Brand Info */}
           <div className={styles.brandCol}>
             <Link href="#beranda" className={styles.brandHeader}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -28,21 +28,25 @@ export function Footer() {
                 alt="Logo CV. Tomario Bumi Lestari"
                 className={styles.footerLogo}
               />
-              <div>
+              <div className={styles.brandTextGroup}>
                 <span className={styles.brandName}>TOMARIO BUMI LESTARI</span>
                 <span className={styles.brandTagline}>Quarry &amp; General Contractor</span>
               </div>
             </Link>
 
             <p className={styles.brandDescription}>
-              Perusahaan penyedia agregat batu split berbagai ukuran (10/10, 10/20, 20/30, 30/50),
-              abu batu, pasir cor, serta kontraktor terpercaya pembangunan gedung dan infrastruktur
-              sipil berstandar nasional.
+              Produsen agregat batu split berkualitas standar SNI dan kontraktor pelaksana
+              konstruksi bangunan gedung serta infrastruktur teknik sipil terpercaya di Tobelo, Halmahera Utara.
             </p>
+
+            <div className={styles.companyBadge}>
+              <IconShieldCheck size={16} color="#4ade80" />
+              <span>Badan Usaha Resmi • Standar Mutu SNI</span>
+            </div>
           </div>
 
-          {/* Quick Links */}
-          <div>
+          {/* Column 2: Navigation */}
+          <div className={styles.colNav}>
             <h4 className={styles.footerTitle}>Navigasi</h4>
             <ul className={styles.linkList}>
               <li className={styles.linkItem}>
@@ -57,49 +61,49 @@ export function Footer() {
               </li>
               <li className={styles.linkItem}>
                 <a href="#produk" className={styles.footerLink}>
-                  Produk Material Tambang
+                  Produk Material Agregat
                 </a>
               </li>
               <li className={styles.linkItem}>
                 <a href="#konstruksi" className={styles.footerLink}>
-                  Jasa Konstruksi
+                  Jasa Konstruksi Gedung &amp; Sipil
                 </a>
               </li>
               <li className={styles.linkItem}>
                 <a href="#keunggulan" className={styles.footerLink}>
-                  Keunggulan Kami
+                  Keunggulan Perusahaan
                 </a>
               </li>
               <li className={styles.linkItem}>
                 <a href="#kontak" className={styles.footerLink}>
-                  Kontak &amp; Pemesanan
+                  Kontak &amp; Lokasi Kantor
                 </a>
               </li>
             </ul>
           </div>
 
-          {/* Products & Services */}
-          <div>
+          {/* Column 3: Products & Services */}
+          <div className={styles.colProducts}>
             <h4 className={styles.footerTitle}>Produk &amp; Layanan</h4>
             <ul className={styles.linkList}>
               <li className={styles.linkItem}>
                 <a href="#produk" className={styles.footerLink}>
-                  Agregat 10/10 mm (Split 1x1)
+                  Batu Split 10/10 mm (1x1)
                 </a>
               </li>
               <li className={styles.linkItem}>
                 <a href="#produk" className={styles.footerLink}>
-                  Agregat 10/20 mm (Split 1x2)
+                  Batu Split 10/20 mm (1x2)
                 </a>
               </li>
               <li className={styles.linkItem}>
                 <a href="#produk" className={styles.footerLink}>
-                  Agregat 20/30 mm (Split 2x3)
+                  Batu Split 20/30 mm (2x3)
                 </a>
               </li>
               <li className={styles.linkItem}>
                 <a href="#produk" className={styles.footerLink}>
-                  Agregat 30/50 mm (Split 3x5)
+                  Batu Split 30/50 mm (3x5)
                 </a>
               </li>
               <li className={styles.linkItem}>
@@ -125,56 +129,64 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Contact Details */}
-          <div>
+          {/* Column 4: Official Contact */}
+          <div className={styles.colContact}>
             <h4 className={styles.footerTitle}>Kontak Resmi</h4>
             <div className={styles.contactList}>
-              <div className={styles.contactRow}>
-                <IconWhatsAppFilled size={18} color="#4ade80" />
-                <div>
-                  <a
-                    href={waUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={styles.contactRowLink}
-                  >
-                    {COMPANY_INFO.phoneDisplay}
-                  </a>
-                  <div style={{ fontSize: '0.75rem', color: '#6b7280' }}>
-                    Chat WhatsApp Pemesanan Cepat
-                  </div>
+              {/* WhatsApp */}
+              <a
+                href={waUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.contactCardItem}
+                title="Hubungi via WhatsApp"
+              >
+                <div className={styles.contactIconBox}>
+                  <IconWhatsAppFilled size={18} color="#22c55e" />
+                </div>
+                <div className={styles.contactText}>
+                  <span className={styles.contactLabel}>WhatsApp Resmi</span>
+                  <span className={styles.contactMainVal}>{COMPANY_INFO.phoneDisplay}</span>
+                  <span className={styles.contactSubVal}>Respon cepat konsultasi spesifikasi</span>
+                </div>
+              </a>
+
+              {/* Email */}
+              <a
+                href={`mailto:${COMPANY_INFO.email}`}
+                className={styles.contactCardItem}
+                title="Kirim Email"
+              >
+                <div className={styles.contactIconBox}>
+                  <IconMail size={18} color="#22c55e" />
+                </div>
+                <div className={styles.contactText}>
+                  <span className={styles.contactLabel}>Email Dokumen Proyek</span>
+                  <span className={styles.contactMainVal}>{COMPANY_INFO.email}</span>
+                  <span className={styles.contactSubVal}>Penawaran resmi, RAB &amp; PO</span>
+                </div>
+              </a>
+
+              {/* Jam Operasional */}
+              <div className={styles.contactCardItem}>
+                <div className={styles.contactIconBox}>
+                  <IconClock size={18} color="#94a3b8" />
+                </div>
+                <div className={styles.contactText}>
+                  <span className={styles.contactLabel}>Jam Operasional</span>
+                  <span className={styles.contactMainVal}>{COMPANY_INFO.operationalHours}</span>
+                  <span className={styles.contactSubVal}>Pelayanan kantor &amp; muat armada</span>
                 </div>
               </div>
 
-              <div className={styles.contactRow}>
-                <IconMail size={18} color="#4ade80" />
-                <div>
-                  <a
-                    href={`mailto:${COMPANY_INFO.email}`}
-                    className={styles.contactRowLink}
-                  >
-                    {COMPANY_INFO.email}
-                  </a>
-                  <div style={{ fontSize: '0.75rem', color: '#6b7280' }}>
-                    Email Penawaran &amp; Dokumen Proyek
-                  </div>
+              {/* Alamat Kantor */}
+              <div className={styles.contactCardItem}>
+                <div className={styles.contactIconBox}>
+                  <IconMapPin size={18} color="#94a3b8" />
                 </div>
-              </div>
-
-              <div className={styles.contactRow}>
-                <IconClock size={18} color="#9ca3af" />
-                <div>
-                  <div>{COMPANY_INFO.operationalHours}</div>
-                  <div style={{ fontSize: '0.75rem', color: '#6b7280' }}>
-                    Operasional Pengiriman Terjadwal
-                  </div>
-                </div>
-              </div>
-
-              <div className={styles.contactRow}>
-                <IconMapPin size={18} color="#9ca3af" />
-                <div>
-                  <div>{COMPANY_INFO.address}</div>
+                <div className={styles.contactText}>
+                  <span className={styles.contactLabel}>Lokasi Kantor</span>
+                  <span className={styles.contactMainVal}>{COMPANY_INFO.address}</span>
                 </div>
               </div>
             </div>
@@ -183,11 +195,15 @@ export function Footer() {
 
         {/* Bottom Bar */}
         <div className={styles.bottomBar}>
-          <div>
-            &copy; {new Date().getFullYear()} CV. Tomario Bumi Lestari. Seluruh Hak Cipta Dilindungi.
+          <div className={styles.copyrightText}>
+            &copy; {new Date().getFullYear()} <strong>CV. Tomario Bumi Lestari</strong>. Seluruh Hak Cipta Dilindungi.
           </div>
-          <div>
-            Profil Perusahaan Resmi • Agregat Batu Pecah &amp; Jasa Konstruksi
+          <div className={styles.bottomMeta}>
+            <span>Tobelo, Halmahera Utara</span>
+            <span className={styles.bottomDivider}>•</span>
+            <span>Agregat Batu Pecah SNI</span>
+            <span className={styles.bottomDivider}>•</span>
+            <span>Kontraktor Konstruksi</span>
           </div>
         </div>
       </div>

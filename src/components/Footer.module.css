@@ -1,20 +1,40 @@
 .footerWrapper {
-  background-color: var(--color-black-pure);
-  color: #9ca3af;
+  background-color: #070a0c;
+  color: #94a3b8;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 4.5rem 0 2rem;
+  position: relative;
+  padding: 4.5rem 0 2.25rem;
+  overflow: hidden;
+}
+
+.footerWrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, #15803d 30%, #22c55e 50%, #15803d 70%, transparent 100%);
 }
 
 .footerGrid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 3rem;
+  gap: 2.75rem;
   margin-bottom: 3.5rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 640px) and (max-width: 1023px) {
   .footerGrid {
-    grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .footerGrid {
+    grid-template-columns: 1.8fr 1fr 1.25fr 1.75fr;
+    gap: 3rem;
   }
 }
 
@@ -26,56 +46,94 @@
 .brandHeader {
   display: flex;
   align-items: center;
-  gap: 0.85rem;
+  gap: 0.9rem;
   margin-bottom: 1.25rem;
   text-decoration: none;
 }
 
 .footerLogo {
-  width: 44px;
-  height: 44px;
+  width: 46px;
+  height: 46px;
   object-fit: contain;
   border-radius: var(--radius-sm);
-  background-color: var(--color-white);
-  padding: 2px;
+  background-color: #ffffff;
+  padding: 3px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  flex-shrink: 0;
+}
+
+.brandTextGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
 }
 
 .brandName {
-  font-size: 1.15rem;
+  font-size: 1.125rem;
   font-weight: 800;
-  color: var(--color-white);
+  color: #ffffff;
   line-height: 1.2;
+  letter-spacing: -0.01em;
+  display: block;
 }
 
 .brandTagline {
-  font-size: 0.75rem;
-  font-weight: 600;
+  font-size: 0.7rem;
+  font-weight: 700;
   color: #4ade80;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.06em;
+  display: block;
 }
 
 .brandDescription {
   font-size: 0.875rem;
   line-height: 1.7;
-  color: #9ca3af;
-  margin-bottom: 1.5rem;
+  color: #94a3b8;
+  margin-bottom: 1.25rem;
+}
+
+.companyBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: rgba(34, 197, 94, 0.08);
+  border: 1px solid rgba(34, 197, 94, 0.2);
+  color: #86efac;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.4rem 0.8rem;
+  border-radius: 9999px;
+  width: fit-content;
 }
 
 .footerTitle {
-  font-size: 0.9375rem;
+  font-size: 0.8125rem;
   font-weight: 700;
-  color: var(--color-white);
+  color: #ffffff;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
   margin-bottom: 1.25rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footerTitle::after {
+  content: '';
+  display: inline-block;
+  width: 14px;
+  height: 2px;
+  background: #22c55e;
+  border-radius: 2px;
 }
 
 .linkList {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 0.65rem;
+  gap: 0.6rem;
 }
 
 .linkItem {
@@ -83,35 +141,82 @@
 }
 
 .footerLink {
-  color: #9ca3af;
-  transition: color var(--transition-fast);
+  color: #94a3b8;
+  transition: all 0.2s ease;
+  display: inline-block;
+  text-decoration: none;
 }
 
 .footerLink:hover {
-  color: #4ade80;
+  color: #ffffff;
+  transform: translateX(3px);
 }
 
+/* Contact List */
 .contactList {
   display: flex;
   flex-direction: column;
-  gap: 0.85rem;
+  gap: 1rem;
 }
 
-.contactRow {
+.contactCardItem {
   display: flex;
   align-items: flex-start;
-  gap: 0.65rem;
-  font-size: 0.875rem;
-  color: #9ca3af;
+  gap: 0.85rem;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease;
 }
 
-.contactRowLink {
-  color: #d1d5db;
-  transition: color var(--transition-fast);
-}
-
-.contactRowLink:hover {
+a.contactCardItem:hover .contactMainVal {
   color: #4ade80;
+}
+
+a.contactCardItem:hover .contactIconBox {
+  background-color: rgba(34, 197, 94, 0.15);
+  border-color: rgba(34, 197, 94, 0.35);
+  transform: translateY(-1px);
+}
+
+.contactIconBox {
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.contactText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.contactLabel {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.contactMainVal {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #f1f5f9;
+  line-height: 1.4;
+  transition: color 0.2s ease;
+}
+
+.contactSubVal {
+  font-size: 0.75rem;
+  color: #64748b;
+  line-height: 1.3;
 }
 
 /* Bottom Bar */
@@ -122,7 +227,23 @@
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 1.25rem;
   font-size: 0.8125rem;
-  color: #6b7280;
+  color: #64748b;
+}
+
+.copyrightText strong {
+  color: #cbd5e1;
+  font-weight: 600;
+}
+
+.bottomMeta {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.bottomDivider {
+  color: #334155;
 }
