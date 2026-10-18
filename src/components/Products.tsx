@@ -91,10 +91,19 @@ export function Products({ onOpenQuoteModal }: ProductsProps) {
 
             return (
               <div key={product.id} className={styles.productCard}>
+                <div className={styles.productMediaWrapper}>
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    className={styles.productImage}
+                    loading="lazy"
+                  />
+                </div>
+
                 <div className={styles.productCardHeader}>
                   <div className={styles.productHeaderTop}>
-                    <span className={styles.fractionBadge}>{product.fraction}</span>
-                    <span className={styles.sniTag}>SNI 03-2834</span>
+                    <span className={styles.sniTag}>Standar SNI 03-2834</span>
+                    <span className={styles.stockBadge}>Ready Stock</span>
                   </div>
                   <h3 className={styles.productTitle}>{product.name}</h3>
                 </div>

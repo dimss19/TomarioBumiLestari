@@ -1,0 +1,961 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <!-- Background Gradient: Deep Slate and Laboratory Charcoal -->
+    <radialGradient id="bgGrad" cx="50%" cy="46%" r="68%">
+      <stop offset="0%" stop-color="#1e293b" />
+      <stop offset="55%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#020617" />
+    </radialGradient>
+
+    <!-- Studio Overhead Spotlight: Illuminates center material dramatically -->
+    <radialGradient id="studioSpotlight" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.22" />
+      <stop offset="40%" stop-color="#22c55e" stop-opacity="0.10" />
+      <stop offset="85%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Laboratory Specimen Tray Base Gradient -->
+    <linearGradient id="trayFloor" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.06)" />
+      <stop offset="100%" stop-color="rgba(0,0,0,0.5)" />
+    </linearGradient>
+
+    <!-- Blueprint CAD Grid -->
+    <pattern id="cadGrid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="1" />
+      <circle cx="0" cy="0" r="1.2" fill="rgba(255,255,255,0.09)" />
+    </pattern>
+
+    <!-- Shadow Blur Filters -->
+    <filter id="rockShadowBlur" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="3.5" />
+    </filter>
+    <filter id="moundBlur" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="9" />
+    </filter>
+  </defs>
+
+  <!-- Layer 1: Background Surface -->
+  <rect width="800" height="500" fill="url(#bgGrad)" />
+  <rect width="800" height="500" fill="url(#cadGrid)" />
+
+  <!-- Laboratory Specimen Stage Oval -->
+  <ellipse cx="400" cy="245" rx="360" ry="145" fill="url(#trayFloor)" stroke="rgba(255,255,255,0.08)" stroke-width="1.5" />
+  <ellipse cx="400" cy="235" r="300" fill="url(#studioSpotlight)" />
+
+  <!-- Layer 2: Technical Calibration Framing -->
+  <rect x="20" y="20" width="760" height="460" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="1" rx="8" />
+  
+  <!-- Engineering Corner Chamfers and Crosshairs -->
+  <g stroke="#22c55e" stroke-width="1.75">
+    <path d="M 16 34 L 26 34 M 34 16 L 34 26" />
+    <path d="M 766 16 L 766 26 M 774 34 L 784 34" />
+    <path d="M 16 466 L 26 466 M 34 474 L 34 484" />
+    <path d="M 766 474 L 766 484 M 774 466 L 784 466" />
+  </g>
+
+  <!-- Center Measurement Datum -->
+  <line x1="385" y1="240" x2="415" y2="240" stroke="rgba(255,255,255,0.2)" stroke-width="1" stroke-dasharray="2,2" />
+  <line x1="400" y1="225" x2="400" y2="255" stroke="rgba(255,255,255,0.2)" stroke-width="1" stroke-dasharray="2,2" />
+
+  <!-- Layer 3: Rendered Stones / Material Cluster -->
+  <g id="rock-pile">
+  <ellipse cx="290.8" cy="183.0" rx="32.8" ry="11.4" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="283.0,164.2 316.8,162.4 309.3,183.8" fill="rgb(91,96,104)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="283.0,164.2 309.3,183.8 287.9,185.2" fill="rgb(109,115,125)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="283.0,164.2 287.9,185.2 272.6,177.8" fill="rgb(129,136,147)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="283.0,164.2 272.6,177.8 257.8,162.4" fill="rgb(149,156,169)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="283.0,164.2 257.8,162.4 268.5,143.0" fill="rgb(182,191,206)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="283.0,164.2 268.5,143.0 287.9,139.6" fill="rgb(171,180,194)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="283.0,164.2 287.9,139.6 308.6,141.8" fill="rgb(143,151,163)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="283.0,164.2 308.6,141.8 316.8,162.4" fill="rgb(128,135,146)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="283.0" cy="164.2" r="2.3" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="414.2" cy="187.1" rx="36.4" ry="12.7" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="412.0,163.4 443.2,164.3 435.0,188.3" fill="rgb(101,107,115)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="412.0,163.4 435.0,188.3 411.0,190.7" fill="rgb(92,97,105)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="412.0,163.4 411.0,190.7 393.7,181.6" fill="rgb(129,135,146)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="412.0,163.4 393.7,181.6 375.8,164.3" fill="rgb(147,154,167)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="412.0,163.4 375.8,164.3 391.8,145.1" fill="rgb(162,171,184)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="412.0,163.4 391.8,145.1 411.0,135.0" fill="rgb(171,180,194)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="412.0,163.4 411.0,135.0 433.2,142.1" fill="rgb(151,158,171)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="412.0,163.4 433.2,142.1 443.2,164.3" fill="rgb(119,125,136)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="412.0" cy="163.4" r="2.5" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="360.7" cy="184.4" rx="29.6" ry="10.3" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="354.2,166.1 386.6,165.9 377.2,181.8" fill="rgb(104,110,119)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="354.2,166.1 377.2,181.8 362.6,191.0" fill="rgb(105,110,119)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="354.2,166.1 362.6,191.0 344.7,189.1" fill="rgb(117,123,133)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="354.2,166.1 344.7,189.1 335.0,174.3" fill="rgb(133,140,152)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="354.2,166.1 335.0,174.3 329.9,155.6" fill="rgb(162,171,184)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="354.2,166.1 329.9,155.6 348.2,148.5" fill="rgb(169,177,192)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="354.2,166.1 348.2,148.5 363.0,138.1" fill="rgb(168,177,191)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="354.2,166.1 363.0,138.1 375.8,151.0" fill="rgb(148,156,168)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="354.2,166.1 375.8,151.0 386.6,165.9" fill="rgb(117,123,133)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="354.2" cy="166.1" r="2.1" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="428.3" cy="190.5" rx="34.4" ry="12.0" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="430.2,163.9 454.5,169.0 438.9,192.5" fill="rgb(108,114,124)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="430.2,163.9 438.9,192.5 409.3,196.7" fill="rgb(119,125,136)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="430.2,163.9 409.3,196.7 399.9,169.0" fill="rgb(147,155,167)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="430.2,163.9 399.9,169.0 410.7,143.8" fill="rgb(162,170,184)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="430.2,163.9 410.7,143.8 438.5,146.1" fill="rgb(161,170,183)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="430.2,163.9 438.5,146.1 454.5,169.0" fill="rgb(116,123,133)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="430.2" cy="163.9" r="2.4" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="322.1" cy="191.9" rx="34.8" ry="12.1" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="323.3,171.4 349.2,170.1 334.4,196.8" fill="rgb(105,110,119)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="323.3,171.4 334.4,196.8 302.7,198.5" fill="rgb(112,118,127)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="323.3,171.4 302.7,198.5 285.5,170.1" fill="rgb(140,147,159)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="323.3,171.4 285.5,170.1 306.9,149.2" fill="rgb(172,180,195)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="323.3,171.4 306.9,149.2 334.7,143.0" fill="rgb(159,168,181)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="323.3,171.4 334.7,143.0 349.2,170.1" fill="rgb(116,122,132)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="323.3" cy="171.4" r="2.4" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="378.0" cy="194.2" rx="36.5" ry="12.7" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="377.0,169.6 399.0,171.3 387.7,193.7" fill="rgb(100,105,114)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="377.0,169.6 387.7,193.7 357.7,201.0" fill="rgb(105,110,119)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="377.0,169.6 357.7,201.0 349.5,171.3" fill="rgb(145,153,165)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="377.0,169.6 349.5,171.3 357.5,141.4" fill="rgb(163,171,185)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="377.0,169.6 357.5,141.4 391.8,141.9" fill="rgb(170,179,193)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="377.0,169.6 391.8,141.9 399.0,171.3" fill="rgb(120,126,137)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="377.0" cy="169.6" r="2.5" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="464.6" cy="192.9" rx="32.9" ry="11.5" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="458.7,167.8 492.9,172.3 477.2,191.6" fill="rgb(101,106,115)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="458.7,167.8 477.2,191.6 457.0,193.3" fill="rgb(105,110,119)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="458.7,167.8 457.0,193.3 438.2,183.6" fill="rgb(131,137,149)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="458.7,167.8 438.2,183.6 442.3,162.9" fill="rgb(168,177,191)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="458.7,167.8 442.3,162.9 454.8,141.7" fill="rgb(181,190,206)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="458.7,167.8 454.8,141.7 478.5,151.3" fill="rgb(159,167,180)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="458.7,167.8 478.5,151.3 492.9,172.3" fill="rgb(129,136,147)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="458.7" cy="167.8" r="2.3" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="425.6" cy="187.9" rx="24.6" ry="8.6" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="423.6,171.8 446.9,172.5 439.0,192.0" fill="rgb(93,98,106)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="423.6,171.8 439.0,192.0 418.8,192.8" fill="rgb(93,98,106)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="423.6,171.8 418.8,192.8 402.3,182.7" fill="rgb(131,138,150)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="423.6,171.8 402.3,182.7 400.4,161.5" fill="rgb(169,177,192)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="423.6,171.8 400.4,161.5 418.0,148.7" fill="rgb(180,189,204)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="423.6,171.8 418.0,148.7 434.6,158.5" fill="rgb(158,167,180)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="423.6,171.8 434.6,158.5 446.9,172.5" fill="rgb(118,124,134)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="423.6" cy="171.8" r="1.7" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="327.3" cy="191.8" rx="30.1" ry="10.5" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="328.7,176.1 345.6,172.9 338.8,197.3" fill="rgb(101,107,115)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="328.7,176.1 338.8,197.3 310.6,197.3" fill="rgb(107,112,122)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="328.7,176.1 310.6,197.3 300.3,172.9" fill="rgb(136,143,154)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="328.7,176.1 300.3,172.9 313.6,153.6" fill="rgb(157,165,178)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="328.7,176.1 313.6,153.6 338.0,150.0" fill="rgb(153,160,173)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="328.7,176.1 338.0,150.0 345.6,172.9" fill="rgb(126,133,143)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="328.7" cy="176.1" r="2.1" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="386.4" cy="193.9" rx="25.1" ry="8.7" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="380.9,173.6 407.9,178.2 399.8,197.8" fill="rgb(101,107,115)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="380.9,173.6 399.8,197.8 380.3,195.4" fill="rgb(112,119,128)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="380.9,173.6 380.3,195.4 364.9,187.5" fill="rgb(144,151,164)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="380.9,173.6 364.9,187.5 365.4,169.1" fill="rgb(175,184,199)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="380.9,173.6 365.4,169.1 379.2,156.4" fill="rgb(183,192,207)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="380.9,173.6 379.2,156.4 400.3,158.0" fill="rgb(155,163,176)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="380.9,173.6 400.3,158.0 407.9,178.2" fill="rgb(122,128,139)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="380.9" cy="173.6" r="1.7" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="188.1" cy="196.1" rx="25.3" ry="8.8" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="182.9,177.5 209.9,180.3 197.5,194.8" fill="rgb(113,119,129)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="182.9,177.5 197.5,194.8 181.7,199.0" fill="rgb(117,123,133)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="182.9,177.5 181.7,199.0 166.0,189.9" fill="rgb(130,137,148)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="182.9,177.5 166.0,189.9 168.6,171.9" fill="rgb(168,176,191)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="182.9,177.5 168.6,171.9 181.7,161.8" fill="rgb(172,181,196)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="182.9,177.5 181.7,161.8 199.2,163.6" fill="rgb(152,160,173)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="182.9,177.5 199.2,163.6 209.9,180.3" fill="rgb(124,131,142)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="182.9" cy="177.5" r="1.8" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="445.7" cy="205.5" rx="35.7" ry="12.4" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="436.8,178.0 470.9,183.2 464.5,205.1" fill="rgb(97,102,111)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="436.8,178.0 464.5,205.1 442.6,217.0" fill="rgb(102,108,117)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="436.8,178.0 442.6,217.0 424.3,201.4" fill="rgb(124,131,142)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="436.8,178.0 424.3,201.4 412.1,183.2" fill="rgb(146,154,166)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="436.8,178.0 412.1,183.2 424.6,165.2" fill="rgb(164,173,187)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="436.8,178.0 424.6,165.2 442.6,146.4" fill="rgb(178,187,203)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="436.8,178.0 442.6,146.4 463.1,162.6" fill="rgb(161,170,183)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="436.8,178.0 463.1,162.6 470.9,183.2" fill="rgb(118,124,135)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="436.8" cy="178.0" r="2.5" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="516.3" cy="207.2" rx="32.6" ry="11.3" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="512.6,188.1 538.4,186.8 537.4,210.7" fill="rgb(91,96,104)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="512.6,188.1 537.4,210.7 513.5,214.9" fill="rgb(90,95,103)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="512.6,188.1 513.5,214.9 494.2,206.0" fill="rgb(112,118,128)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="512.6,188.1 494.2,206.0 486.0,186.8" fill="rgb(158,167,180)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="512.6,188.1 486.0,186.8 491.8,165.1" fill="rgb(180,189,204)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="512.6,188.1 491.8,165.1 513.5,159.8" fill="rgb(170,179,193)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="512.6,188.1 513.5,159.8 528.6,171.6" fill="rgb(150,158,170)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="512.6,188.1 528.6,171.6 538.4,186.8" fill="rgb(119,125,135)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="512.6" cy="188.1" r="2.3" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="356.4" cy="208.4" rx="32.7" ry="11.4" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="358.1,187.5 379.2,187.9 377.4,211.7" fill="rgb(95,100,109)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="358.1,187.5 377.4,211.7 353.6,218.9" fill="rgb(85,89,97)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="358.1,187.5 353.6,218.9 334.3,207.2" fill="rgb(122,128,139)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="358.1,187.5 334.3,207.2 329.5,187.9" fill="rgb(150,158,171)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="358.1,187.5 329.5,187.9 329.4,163.8" fill="rgb(174,182,197)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="358.1,187.5 329.4,163.8 353.6,155.6" fill="rgb(177,186,201)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="358.1,187.5 353.6,155.6 372.9,168.6" fill="rgb(142,149,161)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="358.1,187.5 372.9,168.6 379.2,187.9" fill="rgb(125,131,142)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="358.1" cy="187.5" r="2.3" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="508.7" cy="205.3" rx="24.7" ry="8.6" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="503.3,191.1 524.4,189.9 519.5,206.1" fill="rgb(100,106,114)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="503.3,191.1 519.5,206.1 501.7,211.2" fill="rgb(101,107,115)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="503.3,191.1 501.7,211.2 488.7,198.5" fill="rgb(134,141,152)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="503.3,191.1 488.7,198.5 484.4,179.2" fill="rgb(159,167,180)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="503.3,191.1 484.4,179.2 502.6,172.3" fill="rgb(170,179,193)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="503.3,191.1 502.6,172.3 516.7,177.2" fill="rgb(154,162,175)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="503.3,191.1 516.7,177.2 524.4,189.9" fill="rgb(135,142,153)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="503.3" cy="191.1" r="1.7" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="457.1" cy="208.3" rx="26.0" ry="9.0" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="457.9,188.1 478.5,192.0 469.1,206.3" fill="rgb(103,109,118)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="457.9,188.1 469.1,206.3 454.8,215.1" fill="rgb(98,103,112)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="457.9,188.1 454.8,215.1 436.4,210.4" fill="rgb(120,127,137)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="457.9,188.1 436.4,210.4 430.2,192.0" fill="rgb(153,161,174)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="457.9,188.1 430.2,192.0 440.0,177.2" fill="rgb(177,186,201)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="457.9,188.1 440.0,177.2 454.8,172.1" fill="rgb(166,175,189)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="457.9,188.1 454.8,172.1 468.0,178.9" fill="rgb(144,151,164)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="457.9,188.1 468.0,178.9 478.5,192.0" fill="rgb(128,135,146)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="457.9" cy="188.1" r="1.8" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="477.4" cy="210.4" rx="29.3" ry="10.2" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="475.1,187.2 504.6,192.1 486.9,207.3" fill="rgb(99,105,113)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="475.1,187.2 486.9,207.3 469.7,214.4" fill="rgb(115,121,131)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="475.1,187.2 469.7,214.4 451.1,203.5" fill="rgb(128,134,145)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="475.1,187.2 451.1,203.5 450.4,180.3" fill="rgb(161,169,183)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="475.1,187.2 450.4,180.3 469.8,170.2" fill="rgb(182,191,207)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="475.1,187.2 469.8,170.2 488.5,174.9" fill="rgb(162,170,184)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="475.1,187.2 488.5,174.9 504.6,192.1" fill="rgb(122,129,139)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="475.1" cy="187.2" r="2.0" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="352.3" cy="208.8" rx="26.7" ry="9.3" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="345.8,190.1 371.9,192.1 360.4,210.2" fill="rgb(107,113,122)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="345.8,190.1 360.4,210.2 341.1,207.4" fill="rgb(117,123,133)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="345.8,190.1 341.1,207.4 329.5,192.1" fill="rgb(152,160,173)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="345.8,190.1 329.5,192.1 341.2,177.0" fill="rgb(177,185,201)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="345.8,190.1 341.2,177.0 359.8,175.0" fill="rgb(168,177,191)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="345.8,190.1 359.8,175.0 371.9,192.1" fill="rgb(133,140,151)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="345.8" cy="190.1" r="1.9" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="263.1" cy="210.8" rx="27.8" ry="9.7" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="257.9,192.0 283.7,193.4 277.1,207.2" fill="rgb(98,104,112)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="257.9,192.0 277.1,207.2 265.7,221.7" fill="rgb(90,95,103)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="257.9,192.0 265.7,221.7 249.5,212.7" fill="rgb(106,111,120)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="257.9,192.0 249.5,212.7 237.9,201.6" fill="rgb(133,140,152)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="257.9,192.0 237.9,201.6 243.6,187.1" fill="rgb(167,175,189)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="257.9,192.0 243.6,187.1 249.4,173.9" fill="rgb(174,183,198)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="257.9,192.0 249.4,173.9 264.7,170.5" fill="rgb(170,179,193)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="257.9,192.0 264.7,170.5 280.3,176.9" fill="rgb(149,156,169)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="257.9,192.0 280.3,176.9 283.7,193.4" fill="rgb(114,120,129)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="257.9" cy="192.0" r="1.9" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="239.1" cy="211.2" rx="26.3" ry="9.1" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="234.2,194.8 254.9,194.7 255.5,213.4" fill="rgb(93,98,106)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="234.2,194.8 255.5,213.4 236.8,219.0" fill="rgb(90,95,103)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="234.2,194.8 236.8,219.0 219.7,211.8" fill="rgb(115,121,131)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="234.2,194.8 219.7,211.8 215.1,194.7" fill="rgb(157,166,179)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="234.2,194.8 215.1,194.7 217.6,175.5" fill="rgb(170,179,194)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="234.2,194.8 217.6,175.5 236.8,175.5" fill="rgb(183,193,208)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="234.2,194.8 236.8,175.5 252.2,179.4" fill="rgb(150,158,171)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="234.2,194.8 252.2,179.4 254.9,194.7" fill="rgb(130,137,148)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="234.2" cy="194.8" r="1.8" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="396.8" cy="210.7" rx="23.9" ry="8.3" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="392.5,192.9 410.9,195.7 405.9,215.0" fill="rgb(99,105,113)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="392.5,192.9 405.9,215.0 384.9,212.8" fill="rgb(119,125,136)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="392.5,192.9 384.9,212.8 373.2,195.7" fill="rgb(151,159,172)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="392.5,192.9 373.2,195.7 386.3,181.0" fill="rgb(176,185,200)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="392.5,192.9 386.3,181.0 406.4,175.5" fill="rgb(166,174,189)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="392.5,192.9 406.4,175.5 410.9,195.7" fill="rgb(138,145,157)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="392.5" cy="192.9" r="1.7" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="329.8" cy="214.8" rx="29.8" ry="10.4" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="330.5,192.6 358.2,196.2 348.9,217.8" fill="rgb(100,105,114)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="330.5,192.6 348.9,217.8 327.2,220.3" fill="rgb(97,103,111)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="330.5,192.6 327.2,220.3 306.4,216.9" fill="rgb(112,118,128)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="330.5,192.6 306.4,216.9 306.6,196.2" fill="rgb(138,146,157)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="330.5,192.6 306.6,196.2 306.9,175.9" fill="rgb(175,184,199)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="330.5,192.6 306.9,175.9 327.2,172.2" fill="rgb(178,187,202)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="330.5,192.6 327.2,172.2 341.3,182.1" fill="rgb(156,164,177)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="330.5,192.6 341.3,182.1 358.2,196.2" fill="rgb(125,131,142)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="330.5" cy="192.6" r="2.1" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="497.4" cy="217.6" rx="32.1" ry="11.2" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="490.4,198.3 524.7,197.5 509.2,215.9" fill="rgb(106,112,121)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="490.4,198.3 509.2,215.9 488.2,225.3" fill="rgb(99,104,113)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="490.4,198.3 488.2,225.3 466.9,210.8" fill="rgb(134,141,152)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="490.4,198.3 466.9,210.8 465.3,183.4" fill="rgb(176,185,200)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="490.4,198.3 465.3,183.4 488.9,172.9" fill="rgb(170,179,193)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="490.4,198.3 488.9,172.9 514.1,172.9" fill="rgb(155,163,176)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="490.4,198.3 514.1,172.9 524.7,197.5" fill="rgb(116,123,133)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="490.4" cy="198.3" r="2.2" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="422.3" cy="214.6" rx="26.0" ry="9.0" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="420.8,194.3 444.6,198.4 428.6,213.2" fill="rgb(105,110,119)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="420.8,194.3 428.6,213.2 410.0,215.7" fill="rgb(121,128,138)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="420.8,194.3 410.0,215.7 393.4,198.4" fill="rgb(156,164,177)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="420.8,194.3 393.4,198.4 411.3,183.2" fill="rgb(177,186,201)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="420.8,194.3 411.3,183.2 430.5,180.1" fill="rgb(159,167,181)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="420.8,194.3 430.5,180.1 444.6,198.4" fill="rgb(121,127,138)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="420.8" cy="194.3" r="1.8" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="455.3" cy="216.2" rx="28.3" ry="9.8" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="451.9,196.7 479.4,198.5 470.5,220.7" fill="rgb(94,99,107)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="451.9,196.7 470.5,220.7 446.7,225.4" fill="rgb(105,111,120)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="451.9,196.7 446.7,225.4 428.4,210.3" fill="rgb(137,144,156)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="451.9,196.7 428.4,210.3 426.4,185.8" fill="rgb(161,170,183)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="451.9,196.7 426.4,185.8 446.3,170.0" fill="rgb(189,198,214)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="451.9,196.7 446.3,170.0 465.7,182.5" fill="rgb(158,166,180)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="451.9,196.7 465.7,182.5 479.4,198.5" fill="rgb(121,128,138)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="451.9" cy="196.7" r="2.0" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="549.1" cy="215.1" rx="24.6" ry="8.6" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="546.4,200.4 572.0,199.7 564.0,216.8" fill="rgb(96,102,110)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="546.4,200.4 564.0,216.8 546.9,225.3" fill="rgb(87,91,99)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="546.4,200.4 546.9,225.3 528.8,217.7" fill="rgb(118,125,135)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="546.4,200.4 528.8,217.7 530.2,199.7" fill="rgb(151,159,172)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="546.4,200.4 530.2,199.7 530.1,182.8" fill="rgb(176,185,200)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="546.4,200.4 530.1,182.8 546.9,182.1" fill="rgb(177,186,201)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="546.4,200.4 546.9,182.1 558.7,187.9" fill="rgb(150,157,170)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="546.4,200.4 558.7,187.9 572.0,199.7" fill="rgb(125,132,142)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="546.4" cy="200.4" r="1.7" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="390.8" cy="217.3" rx="27.5" ry="9.6" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="386.5,197.1 413.8,200.1 404.3,216.0" fill="rgb(109,115,124)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="386.5,197.1 404.3,216.0 388.4,224.7" fill="rgb(111,116,126)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="386.5,197.1 388.4,224.7 375.6,212.9" fill="rgb(127,134,145)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="386.5,197.1 375.6,212.9 365.8,200.1" fill="rgb(154,162,175)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="386.5,197.1 365.8,200.1 368.8,180.4" fill="rgb(181,190,205)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="386.5,197.1 368.8,180.4 388.4,177.0" fill="rgb(173,182,196)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="386.5,197.1 388.4,177.0 405.7,182.8" fill="rgb(151,159,172)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="386.5,197.1 405.7,182.8 413.8,200.1" fill="rgb(120,127,137)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="386.5" cy="197.1" r="1.9" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="450.9" cy="217.7" rx="25.3" ry="8.8" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="446.3,203.6 468.1,201.9 459.3,215.2" fill="rgb(112,118,128)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="446.3,203.6 459.3,215.2 442.9,227.2" fill="rgb(97,102,111)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="446.3,203.6 442.9,227.2 430.4,210.7" fill="rgb(122,129,139)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="446.3,203.6 430.4,210.7 433.6,194.6" fill="rgb(164,172,186)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="446.3,203.6 433.6,194.6 444.8,184.9" fill="rgb(171,180,194)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="446.3,203.6 444.8,184.9 464.3,182.3" fill="rgb(153,161,174)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="446.3,203.6 464.3,182.3 468.1,201.9" fill="rgb(120,126,137)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="446.3" cy="203.6" r="1.8" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="482.7" cy="219.2" rx="24.6" ry="8.6" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="479.8,200.2 505.1,203.8 496.9,220.1" fill="rgb(90,95,102)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="479.8,200.2 496.9,220.1 480.6,228.7" fill="rgb(97,103,111)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="479.8,200.2 480.6,228.7 466.6,217.8" fill="rgb(129,136,147)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="479.8,200.2 466.6,217.8 455.7,203.8" fill="rgb(152,160,173)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="479.8,200.2 455.7,203.8 463.4,186.6" fill="rgb(173,181,196)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="479.8,200.2 463.4,186.6 480.6,183.6" fill="rgb(173,182,196)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="479.8,200.2 480.6,183.6 493.8,190.6" fill="rgb(149,157,170)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="479.8,200.2 493.8,190.6 505.1,203.8" fill="rgb(118,124,135)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="479.8" cy="200.2" r="1.7" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="421.1" cy="230.5" rx="35.7" ry="12.4" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="412.7,206.6 453.1,208.2 439.5,226.3" fill="rgb(93,98,106)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="412.7,206.6 439.5,226.3 423.2,237.6" fill="rgb(101,106,115)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="412.7,206.6 423.2,237.6 400.6,238.3" fill="rgb(122,128,139)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="412.7,206.6 400.6,238.3 394.6,216.7" fill="rgb(144,151,164)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="412.7,206.6 394.6,216.7 391.8,198.6" fill="rgb(171,180,194)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="412.7,206.6 391.8,198.6 406.2,187.8" fill="rgb(179,188,203)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="412.7,206.6 406.2,187.8 423.4,177.3" fill="rgb(164,172,186)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="412.7,206.6 423.4,177.3 439.8,189.8" fill="rgb(151,159,171)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="412.7,206.6 439.8,189.8 453.1,208.2" fill="rgb(128,134,145)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="412.7" cy="206.6" r="2.5" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="446.8" cy="223.9" rx="24.4" ry="8.5" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="442.8,206.7 461.2,208.6 458.1,225.4" fill="rgb(113,119,129)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="442.8,206.7 458.1,225.4 440.3,228.0" fill="rgb(103,108,117)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="442.8,206.7 440.3,228.0 425.5,217.9" fill="rgb(128,135,146)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="442.8,206.7 425.5,217.9 429.4,201.3" fill="rgb(159,167,181)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="442.8,206.7 429.4,201.3 440.6,190.6" fill="rgb(169,178,192)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="442.8,206.7 440.6,190.6 459.1,190.7" fill="rgb(163,171,185)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="442.8,206.7 459.1,190.7 461.2,208.6" fill="rgb(120,126,136)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="442.8" cy="206.7" r="1.7" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="519.0" cy="231.6" rx="34.9" ry="12.1" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="509.7,212.5 545.2,209.7 533.8,227.5" fill="rgb(103,109,118)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="509.7,212.5 533.8,227.5 516.0,235.5" fill="rgb(102,108,117)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="509.7,212.5 516.0,235.5 490.4,235.3" fill="rgb(130,137,148)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="509.7,212.5 490.4,235.3 492.6,209.7" fill="rgb(143,150,162)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="509.7,212.5 492.6,209.7 491.2,184.9" fill="rgb(169,178,192)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="509.7,212.5 491.2,184.9 516.0,180.5" fill="rgb(185,194,210)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="509.7,212.5 516.0,180.5 538.9,186.8" fill="rgb(152,160,173)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="509.7,212.5 538.9,186.8 545.2,209.7" fill="rgb(124,130,141)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="509.7" cy="212.5" r="2.4" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="372.1" cy="233.2" rx="36.7" ry="12.8" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="367.1,211.5 405.1,210.2 386.2,232.0" fill="rgb(104,110,119)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="367.1,211.5 386.2,232.0 362.6,237.8" fill="rgb(109,115,124)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="367.1,211.5 362.6,237.8 338.1,225.0" fill="rgb(130,137,148)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="367.1,211.5 338.1,225.0 343.0,197.8" fill="rgb(168,177,191)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="367.1,211.5 343.0,197.8 361.5,177.9" fill="rgb(167,175,189)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="367.1,211.5 361.5,177.9 391.9,181.3" fill="rgb(150,157,170)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="367.1,211.5 391.9,181.3 405.1,210.2" fill="rgb(123,129,140)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="367.1" cy="211.5" r="2.6" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="215.3" cy="230.3" rx="31.1" ry="10.8" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="206.9,212.2 238.1,210.8 232.2,230.4" fill="rgb(95,100,109)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="206.9,212.2 232.2,230.4 212.6,235.3" fill="rgb(101,107,116)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="206.9,212.2 212.6,235.3 196.7,226.7" fill="rgb(119,125,135)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="206.9,212.2 196.7,226.7 191.3,210.8" fill="rgb(155,163,177)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="206.9,212.2 191.3,210.8 191.3,189.5" fill="rgb(178,187,202)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="206.9,212.2 191.3,189.5 212.6,186.5" fill="rgb(176,185,200)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="206.9,212.2 212.6,186.5 231.5,191.9" fill="rgb(154,162,175)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="206.9,212.2 231.5,191.9 238.1,210.8" fill="rgb(131,138,149)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="206.9" cy="212.2" r="2.2" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="505.8" cy="229.2" rx="28.6" ry="9.9" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="506.7,205.2 523.6,211.4 520.7,226.0" fill="rgb(100,106,115)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="506.7,205.2 520.7,226.0 506.8,230.9" fill="rgb(101,107,116)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="506.7,205.2 506.8,230.9 493.5,228.3" fill="rgb(127,133,144)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="506.7,205.2 493.5,228.3 481.8,219.2" fill="rgb(148,156,169)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="506.7,205.2 481.8,219.2 476.2,201.5" fill="rgb(169,178,192)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="506.7,205.2 476.2,201.5 490.6,189.4" fill="rgb(184,194,209)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="506.7,205.2 490.6,189.4 508.5,182.1" fill="rgb(182,191,207)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="506.7,205.2 508.5,182.1 521.4,196.2" fill="rgb(151,159,171)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="506.7,205.2 521.4,196.2 523.6,211.4" fill="rgb(118,124,135)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="506.7" cy="205.2" r="2.0" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="365.5" cy="234.5" rx="31.8" ry="11.1" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="359.3,211.9 395.4,214.6 382.2,230.9" fill="rgb(104,109,118)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="359.3,211.9 382.2,230.9 367.6,242.0" fill="rgb(103,108,117)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="359.3,211.9 367.6,242.0 347.5,241.0" fill="rgb(108,114,123)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="359.3,211.9 347.5,241.0 333.6,225.2" fill="rgb(144,151,163)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="359.3,211.9 333.6,225.2 336.3,205.0" fill="rgb(178,187,202)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="359.3,211.9 336.3,205.0 347.1,187.5" fill="rgb(175,184,199)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="359.3,211.9 347.1,187.5 368.0,185.1" fill="rgb(170,179,193)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="359.3,211.9 368.0,185.1 380.9,199.4" fill="rgb(154,162,175)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="359.3,211.9 380.9,199.4 395.4,214.6" fill="rgb(114,120,130)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="359.3" cy="211.9" r="2.2" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="205.7" cy="233.7" rx="30.1" ry="10.5" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="206.4,210.1 233.6,214.9 220.2,232.1" fill="rgb(102,108,117)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="206.4,210.1 220.2,232.1 203.1,236.9" fill="rgb(108,114,123)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="206.4,210.1 203.1,236.9 187.3,230.7" fill="rgb(114,120,130)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="206.4,210.1 187.3,230.7 177.7,214.9" fill="rgb(144,151,164)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="206.4,210.1 177.7,214.9 187.6,199.4" fill="rgb(177,186,201)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="206.4,210.1 187.6,199.4 203.1,187.4" fill="rgb(169,177,192)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="206.4,210.1 203.1,187.4 224.9,193.1" fill="rgb(152,160,173)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="206.4,210.1 224.9,193.1 233.6,214.9" fill="rgb(114,120,130)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="206.4" cy="210.1" r="2.1" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="443.7" cy="231.8" rx="26.7" ry="9.3" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="439.9,215.8 462.1,215.1 459.8,233.6" fill="rgb(100,106,114)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="439.9,215.8 459.8,233.6 441.3,236.4" fill="rgb(100,106,114)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="439.9,215.8 441.3,236.4 426.6,229.8" fill="rgb(117,123,133)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="439.9,215.8 426.6,229.8 422.3,215.1" fill="rgb(150,157,170)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="439.9,215.8 422.3,215.1 424.2,197.9" fill="rgb(169,178,193)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="439.9,215.8 424.2,197.9 441.3,195.7" fill="rgb(169,177,192)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="439.9,215.8 441.3,195.7 454.1,202.4" fill="rgb(153,161,174)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="439.9,215.8 454.1,202.4 462.1,215.1" fill="rgb(129,136,147)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="439.9" cy="215.8" r="1.9" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="541.5" cy="240.7" rx="37.3" ry="13.0" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="538.8,210.4 574.5,217.3 559.0,234.8" fill="rgb(104,110,119)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="538.8,210.4 559.0,234.8 544.5,252.8" fill="rgb(99,104,113)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="538.8,210.4 544.5,252.8 520.7,247.6" fill="rgb(105,111,120)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="538.8,210.4 520.7,247.6 512.9,226.5" fill="rgb(139,146,158)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="538.8,210.4 512.9,226.5 514.5,208.6" fill="rgb(158,166,180)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="538.8,210.4 514.5,208.6 520.0,185.8" fill="rgb(176,185,200)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="538.8,210.4 520.0,185.8 544.7,180.6" fill="rgb(183,192,208)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="538.8,210.4 544.7,180.6 568.1,192.3" fill="rgb(145,152,165)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="538.8,210.4 568.1,192.3 574.5,217.3" fill="rgb(123,130,140)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="538.8" cy="210.4" r="2.6" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="434.9" cy="235.5" rx="24.8" ry="8.6" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="430.8,218.4 452.6,219.9 445.4,235.8" fill="rgb(107,113,122)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="430.8,218.4 445.4,235.8 427.8,241.5" fill="rgb(104,109,118)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="430.8,218.4 427.8,241.5 417.3,227.3" fill="rgb(126,132,143)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="430.8,218.4 417.3,227.3 410.4,209.2" fill="rgb(169,178,192)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="430.8,218.4 410.4,209.2 428.0,199.2" fill="rgb(187,196,212)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="430.8,218.4 428.0,199.2 443.7,206.2" fill="rgb(153,161,174)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="430.8,218.4 443.7,206.2 452.6,219.9" fill="rgb(125,131,142)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="430.8" cy="218.4" r="1.7" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="295.7" cy="242.1" rx="34.2" ry="11.9" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="292.5,220.6 319.4,220.6 314.9,248.5" fill="rgb(97,103,111)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="292.5,220.6 314.9,248.5 286.3,248.5" fill="rgb(91,96,104)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="292.5,220.6 286.3,248.5 267.1,232.9" fill="rgb(135,142,154)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="292.5,220.6 267.1,232.9 269.1,209.3" fill="rgb(158,166,180)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="292.5,220.6 269.1,209.3 287.1,196.3" fill="rgb(173,182,197)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="292.5,220.6 287.1,196.3 309.9,199.0" fill="rgb(151,159,172)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="292.5,220.6 309.9,199.0 319.4,220.6" fill="rgb(120,127,137)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="292.5" cy="220.6" r="2.4" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="623.1" cy="237.8" rx="24.7" ry="8.6" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="616.9,217.0 646.6,222.4 633.1,234.5" fill="rgb(106,112,121)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="616.9,217.0 633.1,234.5 621.0,246.1" fill="rgb(109,115,124)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="616.9,217.0 621.0,246.1 606.4,236.9" fill="rgb(119,125,135)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="616.9,217.0 606.4,236.9 597.9,222.4" fill="rgb(162,170,184)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="616.9,217.0 597.9,222.4 604.2,205.6" fill="rgb(179,188,203)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="616.9,217.0 604.2,205.6 621.0,202.9" fill="rgb(171,179,194)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="616.9,217.0 621.0,202.9 635.1,208.2" fill="rgb(163,171,185)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="616.9,217.0 635.1,208.2 646.6,222.4" fill="rgb(129,136,147)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="616.9" cy="217.0" r="1.7" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="361.2" cy="239.6" rx="26.8" ry="9.3" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="362.2,217.2 380.9,222.8 377.4,241.3" fill="rgb(95,101,109)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="362.2,217.2 377.4,241.3 358.9,247.3" fill="rgb(89,94,102)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="362.2,217.2 358.9,247.3 340.1,241.6" fill="rgb(116,123,133)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="362.2,217.2 340.1,241.6 331.7,222.8" fill="rgb(153,161,174)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="362.2,217.2 331.7,222.8 343.3,207.2" fill="rgb(178,187,202)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="362.2,217.2 343.3,207.2 358.9,196.8" fill="rgb(183,192,208)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="362.2,217.2 358.9,196.8 376.6,205.1" fill="rgb(148,156,169)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="362.2,217.2 376.6,205.1 380.9,222.8" fill="rgb(116,122,132)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="362.2" cy="217.2" r="1.9" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="361.6" cy="246.4" rx="35.1" ry="12.2" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="354.7,217.6 391.9,224.4 375.7,241.6" fill="rgb(97,103,111)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="354.7,217.6 375.7,241.6 358.6,252.4" fill="rgb(102,108,117)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="354.7,217.6 358.6,252.4 335.1,247.9" fill="rgb(126,133,144)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="354.7,217.6 335.1,247.9 326.2,224.4" fill="rgb(165,173,187)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="354.7,217.6 326.2,224.4 338.2,204.1" fill="rgb(170,178,193)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="354.7,217.6 338.2,204.1 358.6,201.3" fill="rgb(173,182,196)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="354.7,217.6 358.6,201.3 375.3,207.7" fill="rgb(152,160,173)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="354.7,217.6 375.3,207.7 391.9,224.4" fill="rgb(126,133,143)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="354.7" cy="217.6" r="2.4" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="230.0" cy="247.9" rx="36.9" ry="12.8" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="231.0,219.4 256.6,224.8 240.3,248.1" fill="rgb(108,114,124)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="231.0,219.4 240.3,248.1 211.6,251.1" fill="rgb(107,112,122)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="231.0,219.4 211.6,251.1 201.2,224.8" fill="rgb(136,143,155)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="231.0,219.4 201.2,224.8 209.6,195.0" fill="rgb(161,170,183)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="231.0,219.4 209.6,195.0 244.7,193.8" fill="rgb(171,179,194)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="231.0,219.4 244.7,193.8 256.6,224.8" fill="rgb(127,133,144)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="231.0" cy="219.4" r="2.6" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="393.6" cy="245.1" rx="32.1" ry="11.2" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="388.3,223.0 411.8,225.0 408.3,239.7" fill="rgb(110,116,125)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="388.3,223.0 408.3,239.7 395.7,252.4" fill="rgb(105,110,119)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="388.3,223.0 395.7,252.4 376.3,250.2" fill="rgb(118,125,135)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="388.3,223.0 376.3,250.2 363.4,235.0" fill="rgb(132,139,151)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="388.3,223.0 363.4,235.0 366.0,216.0" fill="rgb(169,177,192)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="388.3,223.0 366.0,216.0 378.7,203.9" fill="rgb(167,176,190)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="388.3,223.0 378.7,203.9 395.9,196.6" fill="rgb(171,179,194)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="388.3,223.0 395.9,196.6 414.1,205.5" fill="rgb(142,150,162)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="388.3,223.0 414.1,205.5 411.8,225.0" fill="rgb(121,128,138)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="388.3" cy="223.0" r="2.2" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="408.3" cy="245.2" rx="32.1" ry="11.2" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="406.9,226.4 435.9,225.1 422.5,239.4" fill="rgb(96,101,110)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="406.9,226.4 422.5,239.4 409.4,246.9" fill="rgb(97,102,110)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="406.9,226.4 409.4,246.9 390.3,251.5" fill="rgb(117,123,133)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="406.9,226.4 390.3,251.5 376.4,235.7" fill="rgb(146,154,166)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="406.9,226.4 376.4,235.7 380.4,216.0" fill="rgb(158,166,180)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="406.9,226.4 380.4,216.0 393.0,203.4" fill="rgb(164,172,186)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="406.9,226.4 393.0,203.4 410.6,196.3" fill="rgb(162,170,184)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="406.9,226.4 410.6,196.3 428.4,206.0" fill="rgb(146,154,166)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="406.9,226.4 428.4,206.0 435.9,225.1" fill="rgb(107,113,122)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="406.9" cy="226.4" r="2.2" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="367.6" cy="244.7" rx="29.0" ry="10.1" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="368.4,226.0 385.8,226.5 383.9,245.3" fill="rgb(103,108,117)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="368.4,226.0 383.9,245.3 365.1,255.6" fill="rgb(84,89,96)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="368.4,226.0 365.1,255.6 350.8,240.8" fill="rgb(117,123,133)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="368.4,226.0 350.8,240.8 341.5,226.5" fill="rgb(140,147,159)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="368.4,226.0 341.5,226.5 345.9,207.3" fill="rgb(175,184,199)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="368.4,226.0 345.9,207.3 365.1,205.9" fill="rgb(165,174,188)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="368.4,226.0 365.1,205.9 385.1,206.5" fill="rgb(155,163,176)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="368.4,226.0 385.1,206.5 385.8,226.5" fill="rgb(112,118,127)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="368.4" cy="226.0" r="2.0" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="543.2" cy="244.6" rx="28.6" ry="10.0" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="539.7,225.8 563.7,226.7 559.0,242.1" fill="rgb(108,114,123)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="539.7,225.8 559.0,242.1 544.4,247.8" fill="rgb(101,106,115)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="539.7,225.8 544.4,247.8 527.8,249.0" fill="rgb(108,113,123)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="539.7,225.8 527.8,249.0 517.1,235.3" fill="rgb(131,138,150)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="539.7,225.8 517.1,235.3 514.3,217.1" fill="rgb(175,184,199)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="539.7,225.8 514.3,217.1 530.0,208.2" fill="rgb(172,181,196)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="539.7,225.8 530.0,208.2 544.3,206.2" fill="rgb(166,174,189)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="539.7,225.8 544.3,206.2 560.7,210.0" fill="rgb(149,156,169)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="539.7,225.8 560.7,210.0 563.7,226.7" fill="rgb(120,127,137)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="539.7" cy="225.8" r="2.0" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="316.0" cy="248.5" rx="34.2" ry="11.9" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="306.6,220.4 342.8,227.1 325.4,248.5" fill="rgb(103,109,117)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="306.6,220.4 325.4,248.5 301.1,247.8" fill="rgb(128,135,146)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="306.6,220.4 301.1,247.8 283.6,227.1" fill="rgb(159,167,181)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="306.6,220.4 283.6,227.1 297.3,199.8" fill="rgb(176,185,200)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="306.6,220.4 297.3,199.8 330.4,196.9" fill="rgb(172,181,195)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="306.6,220.4 330.4,196.9 342.8,227.1" fill="rgb(140,147,159)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="306.6" cy="220.4" r="2.4" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="343.5" cy="244.2" rx="26.9" ry="9.4" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="341.4,227.3 366.8,227.4 354.6,244.2" fill="rgb(104,110,119)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="341.4,227.3 354.6,244.2 335.8,251.2" fill="rgb(103,108,117)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="341.4,227.3 335.8,251.2 324.2,235.6" fill="rgb(130,137,148)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="341.4,227.3 324.2,235.6 325.3,219.7" fill="rgb(153,161,174)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="341.4,227.3 325.3,219.7 335.7,203.2" fill="rgb(177,186,201)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="341.4,227.3 335.7,203.2 355.6,209.3" fill="rgb(149,157,169)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="341.4,227.3 355.6,209.3 366.8,227.4" fill="rgb(122,129,139)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="341.4" cy="227.3" r="1.9" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="506.7" cy="244.4" rx="27.1" ry="9.4" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="501.2,223.7 527.0,227.4 519.3,240.0" fill="rgb(113,119,129)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="501.2,223.7 519.3,240.0 508.5,251.0" fill="rgb(94,99,108)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="501.2,223.7 508.5,251.0 494.0,245.4" fill="rgb(123,130,140)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="501.2,223.7 494.0,245.4 485.6,234.3" fill="rgb(145,153,165)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="501.2,223.7 485.6,234.3 487.5,221.3" fill="rgb(166,175,189)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="501.2,223.7 487.5,221.3 494.8,210.9" fill="rgb(172,181,195)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="501.2,223.7 494.8,210.9 508.4,204.7" fill="rgb(164,173,187)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="501.2,223.7 508.4,204.7 520.0,214.3" fill="rgb(145,153,165)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="501.2,223.7 520.0,214.3 527.0,227.4" fill="rgb(118,124,134)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="501.2" cy="223.7" r="1.9" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="449.5" cy="245.4" rx="28.4" ry="9.9" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="446.1,223.7 474.1,227.6 465.6,246.2" fill="rgb(99,105,113)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="446.1,223.7 465.6,246.2 447.0,254.1" fill="rgb(104,110,119)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="446.1,223.7 447.0,254.1 433.5,241.2" fill="rgb(128,135,146)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="446.1,223.7 433.5,241.2 421.9,227.6" fill="rgb(149,156,169)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="446.1,223.7 421.9,227.6 433.4,214.0" fill="rgb(167,175,190)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="446.1,223.7 433.4,214.0 447.0,201.2" fill="rgb(177,186,201)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="446.1,223.7 447.0,201.2 463.9,210.8" fill="rgb(148,156,169)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="446.1,223.7 463.9,210.8 474.1,227.6" fill="rgb(117,123,133)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="446.1" cy="223.7" r="2.0" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="496.6" cy="244.0" rx="24.9" ry="8.7" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="495.4,226.7 515.9,228.4 509.8,243.8" fill="rgb(94,99,107)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="495.4,226.7 509.8,243.8 494.5,251.9" fill="rgb(102,107,116)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="495.4,226.7 494.5,251.9 478.5,244.4" fill="rgb(117,123,133)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="495.4,226.7 478.5,244.4 472.8,228.4" fill="rgb(154,162,175)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="495.4,226.7 472.8,228.4 482.3,216.3" fill="rgb(165,173,187)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="495.4,226.7 482.3,216.3 494.5,207.8" fill="rgb(172,181,195)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="495.4,226.7 494.5,207.8 511.2,211.7" fill="rgb(150,158,171)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="495.4,226.7 511.2,211.7 515.9,228.4" fill="rgb(118,124,134)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="495.4" cy="226.7" r="1.7" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="420.3" cy="244.8" rx="25.1" ry="8.7" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="420.3,228.1 439.4,229.1 434.5,242.8" fill="rgb(96,101,109)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="420.3,228.1 434.5,242.8 422.3,252.9" fill="rgb(88,93,100)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="420.3,228.1 422.3,252.9 407.7,247.0" fill="rgb(115,121,131)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="420.3,228.1 407.7,247.0 396.8,236.8" fill="rgb(142,150,162)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="420.3,228.1 396.8,236.8 401.7,223.1" fill="rgb(154,162,175)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="420.3,228.1 401.7,223.1 406.4,208.8" fill="rgb(168,177,191)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="420.3,228.1 406.4,208.8 421.6,209.2" fill="rgb(171,179,194)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="420.3,228.1 421.6,209.2 436.5,213.6" fill="rgb(152,160,173)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="420.3,228.1 436.5,213.6 439.4,229.1" fill="rgb(108,114,124)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="420.3" cy="228.1" r="1.7" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="586.8" cy="247.5" rx="24.3" ry="8.4" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="585.5,234.5 600.7,232.3 592.6,246.0" fill="rgb(112,118,127)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="585.5,234.5 592.6,246.0 574.0,250.7" fill="rgb(117,123,133)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="585.5,234.5 574.0,250.7 562.7,232.3" fill="rgb(138,145,157)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="585.5,234.5 562.7,232.3 576.0,217.2" fill="rgb(173,181,196)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="585.5,234.5 576.0,217.2 595.9,212.9" fill="rgb(157,165,178)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="585.5,234.5 595.9,212.9 600.7,232.3" fill="rgb(128,134,145)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="585.5" cy="234.5" r="1.7" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="334.8" cy="251.4" rx="30.2" ry="10.5" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="334.0,235.7 354.4,232.5 353.2,253.5" fill="rgb(96,102,110)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="334.0,235.7 353.2,253.5 332.2,260.3" fill="rgb(88,93,101)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="334.0,235.7 332.2,260.3 313.2,251.5" fill="rgb(119,126,136)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="334.0,235.7 313.2,251.5 306.3,232.5" fill="rgb(138,146,158)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="334.0,235.7 306.3,232.5 315.2,215.5" fill="rgb(167,175,189)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="334.0,235.7 315.2,215.5 332.2,208.5" fill="rgb(170,178,193)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="334.0,235.7 332.2,208.5 350.1,214.6" fill="rgb(139,146,158)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="334.0,235.7 350.1,214.6 354.4,232.5" fill="rgb(112,118,127)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="334.0" cy="235.7" r="2.1" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="446.4" cy="249.4" rx="25.6" ry="8.9" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="447.3,233.2 464.9,233.3 456.7,249.0" fill="rgb(106,112,121)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="447.3,233.2 456.7,249.0 438.7,257.4" fill="rgb(92,97,105)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="447.3,233.2 438.7,257.4 427.5,241.4" fill="rgb(124,131,142)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="447.3,233.2 427.5,241.4 426.1,224.6" fill="rgb(161,170,183)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="447.3,233.2 426.1,224.6 439.2,211.5" fill="rgb(168,176,191)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="447.3,233.2 439.2,211.5 455.4,219.3" fill="rgb(152,159,172)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="447.3,233.2 455.4,219.3 464.9,233.3" fill="rgb(118,125,135)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="447.3" cy="233.2" r="1.8" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="450.6" cy="254.4" rx="28.5" ry="9.9" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="444.1,236.2 474.2,236.5 466.6,259.7" fill="rgb(101,107,116)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="444.1,236.2 466.6,259.7 442.7,259.9" fill="rgb(103,108,117)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="444.1,236.2 442.7,259.9 425.2,247.5" fill="rgb(140,147,159)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="444.1,236.2 425.2,247.5 423.7,224.7" fill="rgb(160,168,182)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="444.1,236.2 423.7,224.7 443.6,217.0" fill="rgb(174,183,197)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="444.1,236.2 443.6,217.0 463.1,217.6" fill="rgb(146,154,166)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="444.1,236.2 463.1,217.6 474.2,236.5" fill="rgb(116,122,132)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="444.1" cy="236.2" r="2.0" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="436.8" cy="256.8" rx="30.2" ry="10.5" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="438.1,237.2 465.0,237.9 451.0,259.0" fill="rgb(99,104,113)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="438.1,237.2 451.0,259.0 427.8,265.9" fill="rgb(105,111,120)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="438.1,237.2 427.8,265.9 407.8,250.6" fill="rgb(136,143,155)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="438.1,237.2 407.8,250.6 414.5,228.4" fill="rgb(153,161,174)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="438.1,237.2 414.5,228.4 429.4,216.8" fill="rgb(167,175,189)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="438.1,237.2 429.4,216.8 452.1,215.4" fill="rgb(152,160,173)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="438.1,237.2 452.1,215.4 465.0,237.9" fill="rgb(116,122,132)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="438.1" cy="237.2" r="2.1" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="456.4" cy="261.7" rx="34.3" ry="11.9" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="454.7,243.9 487.1,240.2 471.8,258.5" fill="rgb(88,93,100)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="454.7,243.9 471.8,258.5 453.4,265.0" fill="rgb(100,106,114)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="454.7,243.9 453.4,265.0 432.0,261.7" fill="rgb(122,128,138)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="454.7,243.9 432.0,261.7 418.8,240.2" fill="rgb(155,163,176)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="454.7,243.9 418.8,240.2 430.5,217.3" fill="rgb(178,187,202)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="454.7,243.9 430.5,217.3 453.4,213.6" fill="rgb(165,174,188)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="454.7,243.9 453.4,213.6 476.5,217.2" fill="rgb(150,158,171)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="454.7,243.9 476.5,217.2 487.1,240.2" fill="rgb(121,127,137)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="454.7" cy="243.9" r="2.4" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="440.7" cy="258.0" rx="27.8" ry="9.7" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="439.8,243.2 462.9,240.6 455.3,257.7" fill="rgb(98,103,111)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="439.8,243.2 455.3,257.7 438.2,262.3" fill="rgb(96,101,109)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="439.8,243.2 438.2,262.3 423.1,255.8" fill="rgb(121,128,138)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="439.8,243.2 423.1,255.8 415.1,240.6" fill="rgb(139,147,159)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="439.8,243.2 415.1,240.6 418.2,220.6" fill="rgb(173,181,196)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="439.8,243.2 418.2,220.6 438.2,221.4" fill="rgb(177,186,201)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="439.8,243.2 438.2,221.4 455.3,223.6" fill="rgb(152,160,173)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="439.8,243.2 455.3,223.6 462.9,240.6" fill="rgb(125,132,142)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="439.8" cy="243.2" r="1.9" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="299.1" cy="264.1" rx="37.1" ry="12.9" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="289.3,240.8 330.0,240.9 318.7,269.5" fill="rgb(101,107,116)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="289.3,240.8 318.7,269.5 288.6,272.4" fill="rgb(101,106,115)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="289.3,240.8 288.6,272.4 267.3,254.6" fill="rgb(141,148,161)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="289.3,240.8 267.3,254.6 261.4,224.3" fill="rgb(174,182,197)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="289.3,240.8 261.4,224.3 289.3,212.4" fill="rgb(170,179,193)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="289.3,240.8 289.3,212.4 314.0,218.0" fill="rgb(150,158,170)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="289.3,240.8 314.0,218.0 330.0,240.9" fill="rgb(124,131,141)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="289.3" cy="240.8" r="2.6" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="249.0" cy="261.9" rx="30.2" ry="10.5" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="250.2,237.2 268.6,243.0 260.5,257.1" fill="rgb(106,111,120)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="250.2,237.2 260.5,257.1 246.4,270.1" fill="rgb(106,112,121)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="250.2,237.2 246.4,270.1 230.9,258.5" fill="rgb(112,118,128)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="250.2,237.2 230.9,258.5 219.9,243.0" fill="rgb(148,156,168)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="250.2,237.2 219.9,243.0 229.4,226.0" fill="rgb(176,185,200)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="250.2,237.2 229.4,226.0 246.4,216.6" fill="rgb(179,188,203)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="250.2,237.2 246.4,216.6 263.6,225.8" fill="rgb(156,164,177)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="250.2,237.2 263.6,225.8 268.6,243.0" fill="rgb(130,136,147)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="250.2" cy="237.2" r="2.1" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="189.9" cy="260.0" rx="25.8" ry="9.0" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="189.6,241.8 207.9,243.8 196.9,259.8" fill="rgb(113,119,129)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="189.6,241.8 196.9,259.8 178.0,260.5" fill="rgb(105,110,119)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="189.6,241.8 178.0,260.5 160.9,243.8" fill="rgb(150,158,171)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="189.6,241.8 160.9,243.8 175.8,223.3" fill="rgb(168,177,191)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="189.6,241.8 175.8,223.3 199.8,222.8" fill="rgb(166,174,188)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="189.6,241.8 199.8,222.8 207.9,243.8" fill="rgb(127,133,144)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="189.6" cy="241.8" r="1.8" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="335.1" cy="266.2" rx="35.1" ry="12.2" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="337.2,245.4 359.1,244.2 351.2,268.2" fill="rgb(98,104,112)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="337.2,245.4 351.2,268.2 326.1,270.4" fill="rgb(100,105,114)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="337.2,245.4 326.1,270.4 306.9,256.3" fill="rgb(133,140,151)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="337.2,245.4 306.9,256.3 307.9,232.6" fill="rgb(161,169,183)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="337.2,245.4 307.9,232.6 324.8,212.2" fill="rgb(164,172,186)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="337.2,245.4 324.8,212.2 350.5,221.0" fill="rgb(147,154,167)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="337.2,245.4 350.5,221.0 359.1,244.2" fill="rgb(118,124,134)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="337.2" cy="245.4" r="2.4" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="274.8" cy="261.3" rx="27.0" ry="9.4" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="269.5,239.1 299.5,244.4 286.8,256.5" fill="rgb(103,108,117)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="269.5,239.1 286.8,256.5 275.6,262.4" fill="rgb(115,121,131)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="269.5,239.1 275.6,262.4 261.6,263.1" fill="rgb(124,130,141)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="269.5,239.1 261.6,263.1 249.0,252.9" fill="rgb(137,145,156)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="269.5,239.1 249.0,252.9 249.6,236.1" fill="rgb(173,182,197)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="269.5,239.1 249.6,236.1 263.5,228.9" fill="rgb(177,186,201)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="269.5,239.1 263.5,228.9 276.7,220.2" fill="rgb(172,181,195)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="269.5,239.1 276.7,220.2 287.5,231.8" fill="rgb(145,153,165)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="269.5,239.1 287.5,231.8 299.5,244.4" fill="rgb(120,126,136)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="269.5" cy="239.1" r="1.9" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="482.9" cy="265.5" rx="32.8" ry="11.4" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="485.1,245.3 503.5,245.0 500.1,261.9" fill="rgb(91,96,104)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="485.1,245.3 500.1,261.9 485.5,275.9" fill="rgb(89,94,101)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="485.1,245.3 485.5,275.9 466.1,269.0" fill="rgb(99,104,113)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="485.1,245.3 466.1,269.0 449.5,256.1" fill="rgb(143,151,163)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="485.1,245.3 449.5,256.1 449.8,234.0" fill="rgb(165,173,187)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="485.1,245.3 449.8,234.0 464.4,217.9" fill="rgb(184,194,209)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="485.1,245.3 464.4,217.9 484.8,217.6" fill="rgb(158,166,180)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="485.1,245.3 484.8,217.6 504.3,224.6" fill="rgb(141,148,160)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="485.1,245.3 504.3,224.6 503.5,245.0" fill="rgb(122,129,139)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="485.1" cy="245.3" r="2.3" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="484.1" cy="271.5" rx="32.5" ry="11.3" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="478.8,250.2 510.7,251.1 503.5,269.8" fill="rgb(98,103,111)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="478.8,250.2 503.5,269.8 486.9,282.8" fill="rgb(88,93,101)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="478.8,250.2 486.9,282.8 465.8,278.0" fill="rgb(116,122,132)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="478.8,250.2 465.8,278.0 455.0,260.7" fill="rgb(138,145,157)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="478.8,250.2 455.0,260.7 459.9,243.3" fill="rgb(157,165,179)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="478.8,250.2 459.9,243.3 465.9,224.4" fill="rgb(176,185,200)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="478.8,250.2 465.9,224.4 485.5,227.6" fill="rgb(179,188,203)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="478.8,250.2 485.5,227.6 501.4,234.3" fill="rgb(146,153,166)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="478.8,250.2 501.4,234.3 510.7,251.1" fill="rgb(122,129,139)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="478.8" cy="250.2" r="2.3" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="424.7" cy="268.7" rx="27.7" ry="9.6" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="423.1,248.7 445.8,251.4 441.9,271.0" fill="rgb(98,104,112)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="423.1,248.7 441.9,271.0 422.3,270.7" fill="rgb(102,107,116)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="423.1,248.7 422.3,270.7 403.5,270.2" fill="rgb(125,131,142)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="423.1,248.7 403.5,270.2 396.8,251.4" fill="rgb(157,166,179)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="423.1,248.7 396.8,251.4 406.9,236.0" fill="rgb(180,189,205)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="423.1,248.7 406.9,236.0 422.3,228.2" fill="rgb(170,178,193)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="423.1,248.7 422.3,228.2 435.9,237.8" fill="rgb(150,158,170)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="423.1,248.7 435.9,237.8 445.8,251.4" fill="rgb(120,126,136)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="423.1" cy="248.7" r="1.9" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="414.6" cy="268.9" rx="25.5" ry="8.9" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="413.6,251.4 433.5,253.0 427.9,272.3" fill="rgb(92,97,105)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="413.6,251.4 427.9,272.3 408.4,270.5" fill="rgb(93,99,107)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="413.6,251.4 408.4,270.5 397.0,260.4" fill="rgb(133,140,151)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="413.6,251.4 397.0,260.4 396.0,245.1" fill="rgb(148,156,169)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="413.6,251.4 396.0,245.1 408.2,234.8" fill="rgb(161,169,183)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="413.6,251.4 408.2,234.8 426.1,235.7" fill="rgb(151,159,172)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="413.6,251.4 426.1,235.7 433.5,253.0" fill="rgb(127,134,145)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="413.6" cy="251.4" r="1.8" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="463.5" cy="275.3" rx="31.1" ry="10.8" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="464.7,250.2 482.8,255.8 481.5,273.3" fill="rgb(107,112,122)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="464.7,250.2 481.5,273.3 465.6,283.0" fill="rgb(98,104,112)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="464.7,250.2 465.6,283.0 446.0,281.4" fill="rgb(119,125,135)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="464.7,250.2 446.0,281.4 432.5,266.2" fill="rgb(137,144,155)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="464.7,250.2 432.5,266.2 440.4,248.4" fill="rgb(168,176,191)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="464.7,250.2 440.4,248.4 449.1,235.6" fill="rgb(174,183,197)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="464.7,250.2 449.1,235.6 464.6,234.3" fill="rgb(171,180,194)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="464.7,250.2 464.6,234.3 482.2,237.9" fill="rgb(136,144,155)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="464.7,250.2 482.2,237.9 482.8,255.8" fill="rgb(127,134,145)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="464.7" cy="250.2" r="2.2" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="331.3" cy="276.0" rx="31.3" ry="10.9" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="330.3,253.8 356.3,256.4 349.3,273.8" fill="rgb(95,100,108)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="330.3,253.8 349.3,273.8 334.2,288.2" fill="rgb(99,105,113)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="330.3,253.8 334.2,288.2 313.2,283.2" fill="rgb(107,113,122)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="330.3,253.8 313.2,283.2 298.3,267.5" fill="rgb(139,146,158)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="330.3,253.8 298.3,267.5 307.5,248.7" fill="rgb(162,170,184)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="330.3,253.8 307.5,248.7 312.4,228.4" fill="rgb(168,177,191)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="330.3,253.8 312.4,228.4 334.0,226.1" fill="rgb(167,175,190)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="330.3,253.8 334.0,226.1 348.1,240.1" fill="rgb(149,157,170)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="330.3,253.8 348.1,240.1 356.3,256.4" fill="rgb(118,124,135)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="330.3" cy="253.8" r="2.2" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="452.7" cy="274.0" rx="24.0" ry="8.4" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="446.3,261.8 472.9,259.0 465.3,277.4" fill="rgb(98,104,112)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="446.3,261.8 465.3,277.4 447.1,274.5" fill="rgb(97,102,111)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="446.3,261.8 447.1,274.5 432.2,267.9" fill="rgb(138,146,157)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="446.3,261.8 432.2,267.9 430.0,249.0" fill="rgb(166,175,189)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="446.3,261.8 430.0,249.0 447.1,243.4" fill="rgb(164,172,186)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="446.3,261.8 447.1,243.4 464.6,241.5" fill="rgb(152,160,173)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="446.3,261.8 464.6,241.5 472.9,259.0" fill="rgb(123,130,140)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="446.3" cy="261.8" r="1.7" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="505.4" cy="276.9" rx="28.4" ry="9.9" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="504.5,252.7 527.7,259.1 521.7,277.9" fill="rgb(90,95,103)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="504.5,252.7 521.7,277.9 502.9,281.6" fill="rgb(101,107,115)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="504.5,252.7 502.9,281.6 486.7,275.3" fill="rgb(123,130,141)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="504.5,252.7 486.7,275.3 475.1,259.1" fill="rgb(156,164,177)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="504.5,252.7 475.1,259.1 482.1,238.3" fill="rgb(176,185,200)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="504.5,252.7 482.1,238.3 502.9,231.8" fill="rgb(184,193,209)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="504.5,252.7 502.9,231.8 517.8,244.2" fill="rgb(163,171,185)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="504.5,252.7 517.8,244.2 527.7,259.1" fill="rgb(115,121,131)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="504.5" cy="252.7" r="2.0" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="446.7" cy="283.4" rx="36.8" ry="12.8" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="439.2,263.9 469.5,260.4 459.9,280.9" fill="rgb(110,116,126)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="439.2,263.9 459.9,280.9 436.6,290.8" fill="rgb(104,110,119)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="439.2,263.9 436.6,290.8 420.4,271.5" fill="rgb(126,133,144)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="439.2,263.9 420.4,271.5 420.5,249.3" fill="rgb(149,157,170)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="439.2,263.9 420.5,249.3 435.8,226.5" fill="rgb(179,188,203)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="439.2,263.9 435.8,226.5 458.5,241.6" fill="rgb(161,169,183)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="439.2,263.9 458.5,241.6 469.5,260.4" fill="rgb(120,126,137)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="439.2" cy="263.9" r="2.6" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="581.5" cy="277.7" rx="27.6" ry="9.6" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="580.0,257.9 607.6,260.4 593.2,284.8" fill="rgb(90,95,103)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="580.0,257.9 593.2,284.8 565.0,284.8" fill="rgb(107,113,123)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="580.0,257.9 565.0,284.8 552.3,260.4" fill="rgb(139,146,158)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="580.0,257.9 552.3,260.4 569.6,244.0" fill="rgb(162,170,184)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="580.0,257.9 569.6,244.0 593.4,235.6" fill="rgb(164,172,186)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="580.0,257.9 593.4,235.6 607.6,260.4" fill="rgb(126,132,143)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="580.0" cy="257.9" r="1.9" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="442.1" cy="284.5" rx="35.2" ry="12.2" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="442.4,259.9 468.2,262.4 453.9,288.0" fill="rgb(91,96,104)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="442.4,259.9 453.9,288.0 426.6,284.1" fill="rgb(113,119,129)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="442.4,259.9 426.6,284.1 410.3,262.4" fill="rgb(137,144,156)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="442.4,259.9 410.3,262.4 425.8,239.5" fill="rgb(171,180,194)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="442.4,259.9 425.8,239.5 457.4,230.7" fill="rgb(163,171,185)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="442.4,259.9 457.4,230.7 468.2,262.4" fill="rgb(131,138,149)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="442.4" cy="259.9" r="2.4" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="481.0" cy="286.7" rx="36.0" ry="12.5" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="476.7,258.5 503.5,264.1 499.7,291.5" fill="rgb(111,117,126)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="476.7,258.5 499.7,291.5 470.1,298.2" fill="rgb(95,101,109)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="476.7,258.5 470.1,298.2 449.9,277.6" fill="rgb(128,135,146)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="476.7,258.5 449.9,277.6 454.2,252.7" fill="rgb(159,168,181)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="476.7,258.5 454.2,252.7 469.7,228.1" fill="rgb(177,186,201)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="476.7,258.5 469.7,228.1 500.3,236.1" fill="rgb(167,175,189)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="476.7,258.5 500.3,236.1 503.5,264.1" fill="rgb(120,127,137)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="476.7" cy="258.5" r="2.5" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="487.0" cy="282.0" rx="27.5" ry="9.6" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="483.5,260.8 505.7,264.8 502.1,286.7" fill="rgb(96,101,110)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="483.5,260.8 502.1,286.7 479.7,286.4" fill="rgb(102,107,116)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="483.5,260.8 479.7,286.4 468.3,272.7" fill="rgb(139,147,159)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="483.5,260.8 468.3,272.7 468.3,256.9" fill="rgb(158,166,179)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="483.5,260.8 468.3,256.9 478.4,237.7" fill="rgb(184,193,208)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="483.5,260.8 478.4,237.7 499.2,246.5" fill="rgb(168,176,191)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="483.5,260.8 499.2,246.5 505.7,264.8" fill="rgb(135,142,153)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="483.5" cy="260.8" r="1.9" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="421.9" cy="286.9" rx="32.2" ry="11.2" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="420.3,269.2 442.5,266.8 441.2,288.9" fill="rgb(95,100,108)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="420.3,269.2 441.2,288.9 419.1,295.6" fill="rgb(84,88,96)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="420.3,269.2 419.1,295.6 396.3,289.5" fill="rgb(111,117,126)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="420.3,269.2 396.3,289.5 388.1,266.8" fill="rgb(143,150,163)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="420.3,269.2 388.1,266.8 396.1,243.7" fill="rgb(174,183,197)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="420.3,269.2 396.1,243.7 419.1,235.8" fill="rgb(181,190,206)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="420.3,269.2 419.1,235.8 435.4,250.5" fill="rgb(152,160,173)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="420.3,269.2 435.4,250.5 442.5,266.8" fill="rgb(129,136,147)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="420.3" cy="269.2" r="2.2" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="551.7" cy="287.6" rx="32.1" ry="11.2" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="545.5,269.5 570.7,267.5 562.6,284.5" fill="rgb(104,110,119)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="545.5,269.5 562.6,284.5 542.3,296.6" fill="rgb(106,112,121)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="545.5,269.5 542.3,296.6 523.2,279.9" fill="rgb(122,129,139)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="545.5,269.5 523.2,279.9 524.0,255.5" fill="rgb(161,170,183)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="545.5,269.5 524.0,255.5 543.0,241.6" fill="rgb(182,191,206)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="545.5,269.5 543.0,241.6 568.1,243.5" fill="rgb(160,168,181)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="545.5,269.5 568.1,243.5 570.7,267.5" fill="rgb(130,137,148)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="545.5" cy="269.5" r="2.2" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="429.1" cy="286.7" rx="27.0" ry="9.4" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="427.6,265.0 453.3,269.8 441.7,284.7" fill="rgb(108,114,123)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="427.6,265.0 441.7,284.7 426.7,293.0" fill="rgb(98,103,111)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="427.6,265.0 426.7,293.0 411.3,285.2" fill="rgb(115,121,131)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="427.6,265.0 411.3,285.2 406.8,269.8" fill="rgb(144,152,164)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="427.6,265.0 406.8,269.8 407.9,251.0" fill="rgb(175,184,198)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="427.6,265.0 407.9,251.0 426.7,247.9" fill="rgb(169,177,192)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="427.6,265.0 426.7,247.9 445.9,250.6" fill="rgb(153,161,174)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="427.6,265.0 445.9,250.6 453.3,269.8" fill="rgb(115,121,131)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="427.6" cy="265.0" r="1.9" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="419.7" cy="295.5" rx="29.3" ry="10.2" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="413.9,278.1 440.3,277.1 428.4,296.6" fill="rgb(108,114,123)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="413.9,278.1 428.4,296.6 403.7,300.5" fill="rgb(106,112,121)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="413.9,278.1 403.7,300.5 393.9,277.1" fill="rgb(141,148,160)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="413.9,278.1 393.9,277.1 407.2,259.8" fill="rgb(175,184,199)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="413.9,278.1 407.2,259.8 427.1,259.9" fill="rgb(152,160,173)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="413.9,278.1 427.1,259.9 440.3,277.1" fill="rgb(126,133,143)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="413.9" cy="278.1" r="2.0" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="563.7" cy="302.9" rx="27.3" ry="9.5" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="565.2,286.3 580.1,285.8 575.0,303.0" fill="rgb(105,111,120)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="565.2,286.3 575.0,303.0 556.5,307.2" fill="rgb(106,111,120)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="565.2,286.3 556.5,307.2 537.6,297.2" fill="rgb(132,138,150)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="565.2,286.3 537.6,297.2 541.6,276.3" fill="rgb(166,175,189)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="565.2,286.3 541.6,276.3 556.8,265.8" fill="rgb(158,166,180)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="565.2,286.3 556.8,265.8 575.0,268.6" fill="rgb(141,149,161)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="565.2,286.3 575.0,268.6 580.1,285.8" fill="rgb(130,137,148)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="565.2" cy="286.3" r="1.9" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="322.2" cy="310.7" rx="33.4" ry="11.6" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="315.9,284.0 352.4,289.8 337.2,307.7" fill="rgb(111,117,126)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="315.9,284.0 337.2,307.7 319.3,313.0" fill="rgb(102,108,116)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="315.9,284.0 319.3,313.0 299.9,309.2" fill="rgb(136,143,154)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="315.9,284.0 299.9,309.2 296.7,289.8" fill="rgb(145,153,165)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="315.9,284.0 296.7,289.8 299.8,270.3" fill="rgb(179,189,204)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="315.9,284.0 299.8,270.3 319.3,264.0" fill="rgb(175,184,199)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="315.9,284.0 319.3,264.0 341.8,267.4" fill="rgb(148,155,168)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="315.9,284.0 341.8,267.4 352.4,289.8" fill="rgb(117,124,134)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="315.9" cy="284.0" r="2.3" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="312.7" cy="312.2" rx="32.7" ry="11.4" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="303.8,292.5 335.1,291.8 330.1,317.1" fill="rgb(105,110,119)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="303.8,292.5 330.1,317.1 303.1,321.7" fill="rgb(97,103,111)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="303.8,292.5 303.1,321.7 284.6,303.9" fill="rgb(127,134,145)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="303.8,292.5 284.6,303.9 279.6,277.2" fill="rgb(168,177,191)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="303.8,292.5 279.6,277.2 303.5,264.0" fill="rgb(181,190,205)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="303.8,292.5 303.5,264.0 323.5,274.7" fill="rgb(150,158,170)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="303.8,292.5 323.5,274.7 335.1,291.8" fill="rgb(124,131,141)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="303.8" cy="292.5" r="2.3" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="467.3" cy="312.3" rx="25.1" ry="8.7" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="468.8,294.5 481.7,296.6 477.1,311.7" fill="rgb(94,99,107)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="468.8,294.5 477.1,311.7 461.2,313.6" fill="rgb(98,103,112)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="468.8,294.5 461.2,313.6 442.3,307.6" fill="rgb(125,132,143)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="468.8,294.5 442.3,307.6 442.1,285.6" fill="rgb(160,168,182)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="468.8,294.5 442.1,285.6 460.8,277.9" fill="rgb(180,189,205)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="468.8,294.5 460.8,277.9 477.1,281.6" fill="rgb(161,170,183)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="468.8,294.5 477.1,281.6 481.7,296.6" fill="rgb(121,127,138)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="468.8" cy="294.5" r="1.7" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="535.8" cy="316.1" rx="28.7" ry="10.0" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="534.5,299.4 561.9,298.1 552.9,317.8" fill="rgb(96,101,109)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="534.5,299.4 552.9,317.8 533.3,320.0" fill="rgb(100,106,114)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="534.5,299.4 533.3,320.0 520.0,311.4" fill="rgb(112,118,127)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="534.5,299.4 520.0,311.4 504.7,298.1" fill="rgb(143,150,162)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="534.5,299.4 504.7,298.1 517.8,282.7" fill="rgb(164,172,186)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="534.5,299.4 517.8,282.7 533.3,269.4" fill="rgb(172,180,195)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="534.5,299.4 533.3,269.4 549.8,281.6" fill="rgb(160,168,182)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="534.5,299.4 549.8,281.6 561.9,298.1" fill="rgb(122,128,139)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="534.5" cy="299.4" r="2.0" fill="rgba(255,255,255,0.7)" />
+  <ellipse cx="468.9" cy="336.7" rx="36.8" ry="12.8" fill="rgba(0,0,0,0.6)" filter="url(#rockShadowBlur)" />
+  <polygon points="466.2,306.9 491.2,313.7 489.0,342.9" fill="rgb(97,102,110)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="466.2,306.9 489.0,342.9 458.6,344.7" fill="rgb(105,111,120)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="466.2,306.9 458.6,344.7 434.4,328.8" fill="rgb(132,139,150)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="466.2,306.9 434.4,328.8 431.6,297.3" fill="rgb(167,176,190)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="466.2,306.9 431.6,297.3 457.6,278.4" fill="rgb(180,189,204)" stroke="rgba(255,255,255,0.45)" stroke-width="0.85" stroke-linejoin="round" />
+  <polygon points="466.2,306.9 457.6,278.4 489.1,284.3" fill="rgb(159,168,181)" stroke="rgba(255,255,255,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <polygon points="466.2,306.9 489.1,284.3 491.2,313.7" fill="rgb(122,129,139)" stroke="rgba(15,23,42,0.45)" stroke-width="0.65" stroke-linejoin="round" />
+  <circle cx="466.2" cy="306.9" r="2.6" fill="rgba(255,255,255,0.7)" />
+  </g>
+
+
+  <!-- Layer 4: Top Specification Headers -->
+  <g transform="translate(36, 34)">
+    <!-- Brand / Origin Pill -->
+    <rect x="0" y="0" width="190" height="28" rx="5" fill="rgba(15, 23, 42, 0.92)" stroke="rgba(255,255,255,0.18)" stroke-width="1" />
+    <circle cx="14" cy="14" r="4" fill="#22c55e" />
+    <text x="26" y="18" fill="#f8fafc" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="10" font-weight="700" letter-spacing="1">CV. TOMARIO BUMI LESTARI</text>
+  </g>
+
+  <g transform="translate(618, 34)">
+    <!-- SNI Standard Pill -->
+    <rect x="0" y="0" width="146" height="28" rx="5" fill="rgba(34, 197, 94, 0.18)" stroke="rgba(34, 197, 94, 0.5)" stroke-width="1" />
+    <circle cx="14" cy="14" r="3.5" fill="#4ade80" />
+    <text x="80" y="18" fill="#86efac" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="10" font-weight="700" text-anchor="middle" letter-spacing="0.5">SNI 03-2834:2000</text>
+  </g>
+
+  <!-- Layer 5: Technical Specimen Footer Slab -->
+  <g transform="translate(36, 408)">
+    <!-- Slab Backing with Deep Contrast -->
+    <rect x="0" y="0" width="728" height="62" rx="6" fill="rgba(15, 23, 42, 0.94)" stroke="rgba(255,255,255,0.18)" stroke-width="1" />
+    
+    <!-- Left: Title and Density -->
+    <text x="22" y="27" fill="#ffffff" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="16" font-weight="800" letter-spacing="0.3">AGREGAT 10/20 MM (SPLIT 1x2)</text>
+    <text x="22" y="47" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11.5" font-weight="500">Standar Utama Beton Bertulang Gedung, Jembatan &amp; Ready-Mix • Densitas: 1.40 - 1.50 t/m³</text>
+
+    <!-- Right: Scientific Caliper and Scale Bar -->
+    <g transform="translate(591, 19)">
+      <text x="57.5" y="12" fill="#86efac" font-family="monospace, sans-serif" font-size="10.5" font-weight="700" text-anchor="middle" letter-spacing="1">SKALA 10-20 mm</text>
+      <!-- Caliper Bar with tick marks -->
+      <line x1="0" y1="18" x2="115" y2="18" stroke="#22c55e" stroke-width="2" />
+      <line x1="0" y1="12" x2="0" y2="24" stroke="#22c55e" stroke-width="2" />
+      <line x1="115" y1="12" x2="115" y2="24" stroke="#22c55e" stroke-width="2" />
+      <line x1="57.5" y1="15" x2="57.5" y2="21" stroke="#22c55e" stroke-width="1.2" />
+      <circle cx="57.5" cy="18" r="2.5" fill="#22c55e" />
+    </g>
+  </g>
+</svg>

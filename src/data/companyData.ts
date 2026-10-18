@@ -6,6 +6,7 @@ export interface ProductItem {
   tagline: string;
   description: string;
   density: string;
+  image: string;
   specs: string[];
   applications: string[];
   badgeColor?: string;
@@ -47,6 +48,7 @@ export const PRODUCTS_DATA: ProductItem[] = [
     description:
       "Batu split dengan fraksi seragam 10/10 mm hasil pemecahan stone crusher modern. Memiliki tingkat kebersihan tinggi, bebas lumpur dan tanah, ideal untuk campuran beton presisi dan paving.",
     density: "± 1.45 - 1.55 ton/m³",
+    image: "/images/products/agregat_10_10.svg",
     specs: [
       "Fraksi nominal: 10 mm x 10 mm",
       "Kadar lumpur: < 1.0%",
@@ -69,6 +71,7 @@ export const PRODUCTS_DATA: ProductItem[] = [
     description:
       "Material agregat kasar paling populer dan serbaguna dalam industri konstruksi. Ukuran butir 10/20 mm memberikan daya ikat semen optimal dan kekuatan tekan struktur terbaik.",
     density: "± 1.40 - 1.50 ton/m³",
+    image: "/images/products/agregat_10_20.svg",
     specs: [
       "Fraksi nominal: 10 mm - 20 mm",
       "Gradasi: Sesuai standar SNI 03-2834",
@@ -91,6 +94,7 @@ export const PRODUCTS_DATA: ProductItem[] = [
     description:
       "Agregat kasar berukuran 20/30 mm yang kokoh dan tahan tekanan ekstrem. Digunakan pada pengecoran beton massa dan lapisan base course jalan raya.",
     density: "± 1.42 - 1.52 ton/m³",
+    image: "/images/products/agregat_20_30.svg",
     specs: [
       "Fraksi nominal: 20 mm - 30 mm",
       "Daya tekan tinggi: Batuan andesit/basalt murni",
@@ -113,6 +117,7 @@ export const PRODUCTS_DATA: ProductItem[] = [
     description:
       "Fraksi batu pecah besar berukuran 30/50 mm dengan porositas dan interlocking alami. Sangat efektif untuk stabilitas tanah dasar dan pondasi sub-base jalan.",
     density: "± 1.35 - 1.48 ton/m³",
+    image: "/images/products/agregat_30_50.svg",
     specs: [
       "Fraksi nominal: 30 mm - 50 mm",
       "Interlocking butiran sangat kokoh",
@@ -135,6 +140,7 @@ export const PRODUCTS_DATA: ProductItem[] = [
     description:
       "Hasil sampingan pemecahan batu alam bermutu tinggi berukuran halus 0-5 mm. Mengandung mineral silika murni yang memperkuat kepadatan campuran beton dan aspal.",
     density: "± 1.40 - 1.55 ton/m³",
+    image: "/images/products/abu_batu.svg",
     specs: [
       "Ukuran partikel: 0 - 5 mm",
       "Kadar debu halus terukur sesuai spesifikasi Bina Marga",
@@ -157,6 +163,7 @@ export const PRODUCTS_DATA: ProductItem[] = [
     description:
       "Pasir alam terpilih yang telah disaring bersih dari kotoran organik dan lumpur berlebih. Menghasilkan adukan semen yang homogen, kuat, dan tidak mudah retak.",
     density: "± 1.40 - 1.60 ton/m³",
+    image: "/images/products/pasir_konstruksi.svg",
     specs: [
       "Modulus kehalusan: 2.3 - 3.1",
       "Kadar lumpur: < 3% (lolos uji standar SNI)",
