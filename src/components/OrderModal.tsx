@@ -16,10 +16,10 @@ interface OrderModalProps {
 }
 
 const MATERIAL_OPTIONS = [
-  'Agregat 10/10 mm (Batu Split 1x1)',
-  'Agregat 10/20 mm (Batu Split 1x2)',
-  'Agregat 20/30 mm (Batu Split 2x3)',
-  'Agregat 30/50 mm (Batu Split 3x5)',
+  'Batu Split 10/10 mm (1x1)',
+  'Batu Split 10/20 mm (1x2)',
+  'Batu Split 20/30 mm (2x3)',
+  'Batu Split 30/50 mm (3x5)',
   'Abu Batu (Stone Dust)',
   'Pasir Alami Konstruksi',
 ];

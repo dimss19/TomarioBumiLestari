@@ -104,10 +104,10 @@ export function About() {
                 skala kecil hingga mega proyek.
               </p>
               <div className={styles.showcaseHighlights}>
-                <span className={styles.tagPill}>Agregat 10/10 mm</span>
-                <span className={styles.tagPill}>Agregat 10/20 mm</span>
-                <span className={styles.tagPill}>Agregat 20/30 mm</span>
-                <span className={styles.tagPill}>Agregat 30/50 mm</span>
+                <span className={styles.tagPill}>Batu Split 10/10 mm</span>
+                <span className={styles.tagPill}>Batu Split 10/20 mm</span>
+                <span className={styles.tagPill}>Batu Split 20/30 mm</span>
+                <span className={styles.tagPill}>Batu Split 30/50 mm</span>
                 <span className={styles.tagPill}>Abu Batu</span>
                 <span className={styles.tagPill}>Pasir Cor</span>
               </div>

@@ -65,7 +65,7 @@ export function Products({ onOpenQuoteModal }: ProductsProps) {
             className={`${styles.filterBtn} ${activeTab === 'agregat' ? styles.filterBtnActive : ''}`}
             onClick={() => setActiveTab('agregat')}
           >
-            Batu Split (10/10, 10/20, 20/30, 30/50)
+            Batu Split
           </button>
           <button
             type="button"
