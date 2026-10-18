@@ -1,0 +1,58 @@
+.floatingWrapper {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 400;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .floatingWrapper {
+    bottom: 1.25rem;
+    right: 1.25rem;
+  }
+}
+
+.floatingTooltip {
+  background-color: var(--color-black-pure);
+  color: var(--color-white);
+  padding: 0.5rem 0.85rem;
+  border-radius: var(--radius-md);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: none;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+@media (min-width: 768px) {
+  .floatingTooltip {
+    display: block;
+  }
+}
+
+.floatingButton {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: #25D366;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 18px rgba(37, 211, 102, 0.45);
+  transition: all var(--transition-normal);
+  border: none;
+  cursor: pointer;
+}
+
+.floatingWrapper:hover .floatingButton {
+  transform: scale(1.08) translateY(-2px);
+  background-color: #20bd5a;
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.55);
+}

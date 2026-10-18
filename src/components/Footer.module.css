@@ -1,0 +1,128 @@
+.footerWrapper {
+  background-color: var(--color-black-pure);
+  color: #9ca3af;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 4.5rem 0 2rem;
+}
+
+.footerGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  margin-bottom: 3.5rem;
+}
+
+@media (min-width: 768px) {
+  .footerGrid {
+    grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+  }
+}
+
+.brandCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.brandHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 1.25rem;
+  text-decoration: none;
+}
+
+.footerLogo {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  border-radius: var(--radius-sm);
+  background-color: var(--color-white);
+  padding: 2px;
+}
+
+.brandName {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--color-white);
+  line-height: 1.2;
+}
+
+.brandTagline {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #4ade80;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.brandDescription {
+  font-size: 0.875rem;
+  line-height: 1.7;
+  color: #9ca3af;
+  margin-bottom: 1.5rem;
+}
+
+.footerTitle {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--color-white);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1.25rem;
+}
+
+.linkList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.linkItem {
+  font-size: 0.875rem;
+}
+
+.footerLink {
+  color: #9ca3af;
+  transition: color var(--transition-fast);
+}
+
+.footerLink:hover {
+  color: #4ade80;
+}
+
+.contactList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.contactRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  font-size: 0.875rem;
+  color: #9ca3af;
+}
+
+.contactRowLink {
+  color: #d1d5db;
+  transition: color var(--transition-fast);
+}
+
+.contactRowLink:hover {
+  color: #4ade80;
+}
+
+/* Bottom Bar */
+.bottomBar {
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.8125rem;
+  color: #6b7280;
+}
