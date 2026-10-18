@@ -53,19 +53,9 @@ export function Hero({ onOpenQuoteModal }: HeroProps) {
                 className="btn btn-primary btn-lg btn-shimmer"
                 onClick={() => onOpenQuoteModal()}
               >
-                <span>Minta Penawaran</span>
+                <span>Minta Penawaran / Pemesanan</span>
                 <IconArrowRight size={16} />
               </button>
-
-              <a
-                href={whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-whatsapp btn-lg"
-              >
-                <IconWhatsAppFilled size={18} />
-                <span>WhatsApp: {COMPANY_INFO.phoneDisplay}</span>
-              </a>
             </div>
 
             <div className={styles.trustPoints}>

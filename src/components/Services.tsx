@@ -1,13 +1,11 @@
 'use client';
 
 import React from 'react';
-import { SERVICES_DATA, ServiceItem, COMPANY_INFO, buildWhatsAppLink, buildEmailLink } from '@/data/companyData';
+import { SERVICES_DATA } from '@/data/companyData';
 import {
   IconBuilding,
   IconCivil,
   IconCheck,
-  IconWhatsAppFilled,
-  IconMail,
   IconArrowRight,
   IconShieldCheck
 } from './Icons';
@@ -18,16 +16,6 @@ interface ServicesProps {
 }
 
 export function Services({ onOpenQuoteModal }: ServicesProps) {
-  const getWaLinkForService = (service: ServiceItem) => {
-    const message = `Halo CV. Tomario Bumi Lestari,\n\nSaya ingin berkonsultasi mengenai jasa konstruksi: ${service.title}.\n\nMohon informasi mekanisme kerjasama, pengajuan RAB, dan jadwal pertemuan/survei lokasi proyek.\n\nTerima kasih.`;
-    return buildWhatsAppLink(message);
-  };
-
-  const getEmailLinkForService = (service: ServiceItem) => {
-    const subject = `Konsultasi & Penawaran Proyek: ${service.title} - CV. Tomario Bumi Lestari`;
-    const body = `Yth. Manajemen CV. Tomario Bumi Lestari,\n\nKami memiliki rencana proyek pekerjaan:\nLayanan: ${service.title}\nLokasi Proyek:\nPerkiraan Waktu Pelaksanaan:\nRingkasan Lingkup Pekerjaan:\n\nMohon petunjuk untuk pengiriman dokumen teknis / gambar kerja / BOQ untuk estimasi biaya.\n\nTerima kasih.`;
-    return buildEmailLink(subject, body);
-  };
 
   return (
     <section id="konstruksi" className="section section-light">
@@ -49,8 +37,6 @@ export function Services({ onOpenQuoteModal }: ServicesProps) {
         <div className={styles.servicesStack}>
           {SERVICES_DATA.map((service, index) => {
             const isReversed = index % 2 === 1;
-            const waLink = getWaLinkForService(service);
-            const emailLink = getEmailLinkForService(service);
 
             return (
               <div
@@ -114,23 +100,12 @@ export function Services({ onOpenQuoteModal }: ServicesProps) {
                   <div className={styles.serviceActions}>
                     <button
                       type="button"
-                      className="btn btn-primary"
+                      className="btn btn-primary btn-shimmer"
                       onClick={() => onOpenQuoteModal(service.title)}
                     >
                       <span>Minta Penawaran &amp; RAB</span>
                       <IconArrowRight size={15} />
                     </button>
-
-                    <a
-                      href={waLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="btn btn-whatsapp"
-                      title="Konsultasi via WhatsApp"
-                    >
-                      <IconWhatsAppFilled size={16} />
-                      <span>WhatsApp Kami</span>
-                    </a>
                   </div>
                 </div>
               </div>

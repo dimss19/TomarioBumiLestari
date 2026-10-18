@@ -16,12 +16,9 @@ export function FloatingWhatsApp() {
       target="_blank"
       rel="noopener noreferrer"
       className={styles.floatingWrapper}
-      aria-label="Hubungi kami melalui WhatsApp"
-      title="Hubungi kami via WhatsApp"
+      aria-label={`Hubungi kami via WhatsApp ${COMPANY_INFO.phoneDisplay}`}
+      title={`WhatsApp: ${COMPANY_INFO.phoneDisplay}`}
     >
-      <div className={styles.floatingTooltip}>
-        Chat WhatsApp: {COMPANY_INFO.phoneDisplay}
-      </div>
       <div className={styles.floatingButton}>
         <IconWhatsAppFilled size={30} />
       </div>
