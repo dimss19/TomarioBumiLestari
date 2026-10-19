@@ -90,6 +90,22 @@ const jsonLd = {
         addressRegion: 'Halmahera Utara, Maluku Utara',
         addressCountry: 'ID',
       },
+      areaServed: {
+        '@type': 'AdministrativeArea',
+        name: 'Halmahera Utara, Maluku Utara',
+      },
+      knowsAbout: [
+        'Produksi Agregat Batu Split SNI',
+        'Batu Split 10/10 mm',
+        'Batu Split 10/20 mm',
+        'Batu Split 20/30 mm',
+        'Batu Split 30/50 mm',
+        'Abu Batu (Stone Dust)',
+        'Pasir Cor Alam',
+        'Konstruksi Bangunan Gedung',
+        'Konstruksi Jalan & Infrastruktur Sipil',
+        'Stone Crusher',
+      ],
       openingHoursSpecification: {
         '@type': 'OpeningHoursSpecification',
         dayOfWeek: [
@@ -105,26 +121,17 @@ const jsonLd = {
       },
       priceRange: '$$',
     },
-    ...PRODUCTS_DATA.map((product) => ({
-      '@type': 'Product',
-      '@id': `https://www.tomariobumilestari.com/#product-${product.id}`,
-      name: product.name,
-      description: product.description,
-      image: `https://www.tomariobumilestari.com${product.image}`,
-      category: 'Konstruksi & Material Bangunan',
-      brand: {
-        '@type': 'Brand',
-        name: COMPANY_INFO.name,
+    {
+      '@type': 'WebSite',
+      '@id': 'https://www.tomariobumilestari.com/#website',
+      url: 'https://www.tomariobumilestari.com',
+      name: COMPANY_INFO.name,
+      description: COMPANY_INFO.tagline,
+      publisher: {
+        '@id': 'https://www.tomariobumilestari.com/#organization',
       },
-      offers: {
-        '@type': 'Offer',
-        priceCurrency: 'IDR',
-        availability: 'https://schema.org/InStock',
-        seller: {
-          '@id': 'https://www.tomariobumilestari.com/#organization',
-        },
-      },
-    })),
+      inLanguage: 'id-ID',
+    },
   ],
 };
 
