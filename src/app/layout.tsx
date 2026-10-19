@@ -3,7 +3,7 @@ import './globals.css';
 import { PRODUCTS_DATA, COMPANY_INFO } from '@/data/companyData';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://tomariobumilestari.com'),
+  metadataBase: new URL('https://www.tomariobumilestari.com'),
   title: 'CV. Tomario Bumi Lestari - Produsen Agregat Batu Pecah & Kontraktor Konstruksi',
   description:
     'Profil resmi CV. Tomario Bumi Lestari. Produsen material batu agregat berkualitas (10/10, 10/20, 20/30, 30/50), abu batu, pasir cor, serta kontraktor bangunan gedung dan teknik sipil berstandar SNI.',
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: 'CV. Tomario Bumi Lestari' }],
   alternates: {
-    canonical: 'https://tomariobumilestari.com',
+    canonical: 'https://www.tomariobumilestari.com',
   },
   robots: {
     index: true,
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     title: 'CV. Tomario Bumi Lestari - Agregat Berkualitas & Jasa Konstruksi',
     description:
       'Solusi terpercaya pasokan batu split berbagai fraksi, abu batu, pasir alam, dan jasa konstruksi gedung & infrastruktur sipil.',
-    url: 'https://tomariobumilestari.com',
+    url: 'https://www.tomariobumilestari.com',
     siteName: 'CV. Tomario Bumi Lestari',
     images: [
       {
@@ -74,12 +74,12 @@ const jsonLd = {
   '@graph': [
     {
       '@type': ['LocalBusiness', 'GeneralContractor'],
-      '@id': 'https://tomariobumilestari.com/#organization',
+      '@id': 'https://www.tomariobumilestari.com/#organization',
       name: COMPANY_INFO.name,
       legalName: COMPANY_INFO.name,
-      url: 'https://tomariobumilestari.com',
-      logo: 'https://tomariobumilestari.com/logo.jpg',
-      image: 'https://tomariobumilestari.com/images/hero_quarry.jpg',
+      url: 'https://www.tomariobumilestari.com',
+      logo: 'https://www.tomariobumilestari.com/logo.jpg',
+      image: 'https://www.tomariobumilestari.com/images/hero_quarry.jpg',
       description: COMPANY_INFO.heroSubtitle,
       telephone: `+${COMPANY_INFO.phoneRaw}`,
       email: COMPANY_INFO.email,
@@ -107,10 +107,10 @@ const jsonLd = {
     },
     ...PRODUCTS_DATA.map((product) => ({
       '@type': 'Product',
-      '@id': `https://tomariobumilestari.com/#product-${product.id}`,
+      '@id': `https://www.tomariobumilestari.com/#product-${product.id}`,
       name: product.name,
       description: product.description,
-      image: `https://tomariobumilestari.com${product.image}`,
+      image: `https://www.tomariobumilestari.com${product.image}`,
       category: 'Konstruksi & Material Bangunan',
       brand: {
         '@type': 'Brand',
@@ -121,7 +121,7 @@ const jsonLd = {
         priceCurrency: 'IDR',
         availability: 'https://schema.org/InStock',
         seller: {
-          '@id': 'https://tomariobumilestari.com/#organization',
+          '@id': 'https://www.tomariobumilestari.com/#organization',
         },
       },
     })),

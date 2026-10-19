@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next';
 import { PRODUCTS_DATA } from '@/data/companyData';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://tomariobumilestari.com';
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.tomariobumilestari.com';
   const currentDate = new Date();
 
   // Daftar gambar produk utama untuk Google Images SEO
