@@ -43,7 +43,7 @@ export function Hero({ onOpenQuoteModal }: HeroProps) {
 
             <p className={styles.heroSubtitle}>
               Penyedia terpercaya batu split berbagai fraksi (10/10, 10/20, 20/30, 30/50),
-              abu batu screening, pasir cor alam, serta pelaksana konstruksi bangunan gedung
+              abu batu screening, pasir hitam alam, serta pelaksana konstruksi bangunan gedung
               dan infrastruktur teknik sipil berstandar SNI.
             </p>
 

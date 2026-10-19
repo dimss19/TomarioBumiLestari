@@ -36,7 +36,7 @@ export const COMPANY_INFO = {
   operationalHours: "10:00 - 19:00 WIT",
   whatsappDirectUrl: "https://wa.me/6285397670606",
   heroSubtitle:
-    "Produsen dan pemasok material batu agregat berkualitas standar SNI, abu batu, pasir cor alam, serta mitra kontraktor berpengalaman untuk proyek bangunan gedung komersial dan infrastruktur teknik sipil.",
+    "Produsen dan pemasok material batu agregat berkualitas standar SNI, abu batu, pasir hitam alam, serta mitra kontraktor berpengalaman untuk proyek bangunan gedung komersial dan infrastruktur teknik sipil.",
 };
 
 export const PRODUCTS_DATA: ProductItem[] = [
@@ -158,12 +158,12 @@ export const PRODUCTS_DATA: ProductItem[] = [
   },
   {
     id: "pasir-konstruksi",
-    name: "Pasir Alami Konstruksi",
+    name: "Pasir Hitam Alami",
     category: "pasir",
-    fraction: "Pasir Cor Beton & Pasir Pasang Berkualitas",
-    tagline: "Pasir alam bersih bebas lumpur untuk struktur beton & plesteran",
+    fraction: "Pasir Hitam Cor & Pasir Pasang Berkualitas",
+    tagline: "Pasir hitam alam bersih bebas lumpur untuk struktur beton & plesteran",
     description:
-      "Pasir alam terpilih yang telah disaring bersih dari kotoran organik dan lumpur berlebih. Menghasilkan adukan semen yang homogen, kuat, dan tidak mudah retak.",
+      "Pasir hitam alam terpilih yang telah disaring bersih dari kotoran organik dan lumpur berlebih. Menghasilkan adukan semen yang homogen, kuat, dan tidak mudah retak.",
     density: "± 1.40 - 1.60 ton/m³",
     image: "/images/products/pasir_konstruksi.jpg",
     specs: [

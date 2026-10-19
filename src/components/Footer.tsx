@@ -113,7 +113,7 @@ export function Footer() {
               </li>
               <li className={styles.linkItem}>
                 <a href="#produk" className={styles.footerLink}>
-                  Pasir Alami Konstruksi
+                  Pasir Hitam Alami
                 </a>
               </li>
               <li className={styles.linkItem}>

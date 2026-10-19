@@ -32,7 +32,7 @@ export function About() {
             </p>
             <p className={styles.aboutText}>
               Dengan pengalaman operasional yang matang, kami memasok berbagai fraksi
-              batu split (10/10, 10/20, 20/30, 30/50), abu batu super halus, dan pasir cor
+              batu split (10/10, 10/20, 20/30, 30/50), abu batu super halus, dan pasir hitam
               alam berkualitas untuk berbagai proyek strategis: pembangunan jalan tol,
               jembatan, bandara, kawasan perumahan, hingga gedung komersial bertingkat.
             </p>
@@ -100,7 +100,7 @@ export function About() {
               <p className={styles.showcaseDesc}>
                 Mengoperasikan fasilitas stone crusher modern untuk memproduksi agregat
                 batu split berbagai fraksi presisi, abu batu screening, dan penyediaan
-                pasir beton pilihan. Kapasitas pasokan kami siap memenuhi kebutuhan proyek
+                pasir hitam pilihan. Kapasitas pasokan kami siap memenuhi kebutuhan proyek
                 skala kecil hingga mega proyek.
               </p>
               <div className={styles.showcaseHighlights}>
@@ -109,7 +109,7 @@ export function About() {
                 <span className={styles.tagPill}>Batu Split 20/30 mm</span>
                 <span className={styles.tagPill}>Batu Split 30/50 mm</span>
                 <span className={styles.tagPill}>Abu Batu</span>
-                <span className={styles.tagPill}>Pasir Cor</span>
+                <span className={styles.tagPill}>Pasir Hitam</span>
               </div>
             </div>
 

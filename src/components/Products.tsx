@@ -79,7 +79,7 @@ export function Products({ onOpenQuoteModal }: ProductsProps) {
             className={`${styles.filterBtn} ${activeTab === 'pasir' ? styles.filterBtnActive : ''}`}
             onClick={() => setActiveTab('pasir')}
           >
-            Pasir Konstruksi
+            Pasir Hitam
           </button>
         </div>
 

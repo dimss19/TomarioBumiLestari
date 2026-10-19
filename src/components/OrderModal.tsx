@@ -21,7 +21,7 @@ const MATERIAL_OPTIONS = [
   'Batu Split 20/30 mm (2x3)',
   'Batu Split 30/50 mm (3x5)',
   'Abu Batu (Stone Dust)',
-  'Pasir Alami Konstruksi',
+  'Pasir Hitam Alami',
 ];
 
 const SERVICE_OPTIONS = [

@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://www.tomariobumilestari.com'),
   title: 'CV. Tomario Bumi Lestari - Produsen Agregat Batu Pecah & Kontraktor Konstruksi',
   description:
-    'Profil resmi CV. Tomario Bumi Lestari. Produsen material batu agregat berkualitas (10/10, 10/20, 20/30, 30/50), abu batu, pasir cor, serta kontraktor bangunan gedung dan teknik sipil berstandar SNI.',
+    'Profil resmi CV. Tomario Bumi Lestari. Produsen material batu agregat berkualitas (10/10, 10/20, 20/30, 30/50), abu batu, pasir hitam, serta kontraktor bangunan gedung dan teknik sipil berstandar SNI.',
   keywords: [
     'CV. Tomario Bumi Lestari',
     'batu split',
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     'agregat 30/50',
     'abu batu',
     'stone dust',
-    'pasir cor',
+    'pasir hitam',
     'jasa konstruksi gedung',
     'jasa konstruksi civil',
     'stone crusher',
@@ -101,7 +101,7 @@ const jsonLd = {
         'Batu Split 20/30 mm',
         'Batu Split 30/50 mm',
         'Abu Batu (Stone Dust)',
-        'Pasir Cor Alam',
+        'Pasir Hitam Alami',
         'Konstruksi Bangunan Gedung',
         'Konstruksi Jalan & Infrastruktur Sipil',
         'Stone Crusher',
